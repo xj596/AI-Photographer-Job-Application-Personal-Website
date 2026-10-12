@@ -596,6 +596,32 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
       color: var(--page-brand);
     }
     .work-card figcaption p { font-size: 0.8125rem; color: var(--muted); max-width: none; }
+    .work-card__frame iframe {
+      position: absolute;
+      inset: 0;
+      inline-size: 100%;
+      block-size: 100%;
+      border: 0;
+      display: block;
+    }
+    .work-card__more {
+      align-self: flex-start;
+      margin-top: var(--space-2);
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--page-brand);
+      border: 1px solid var(--page-brand);
+      border-radius: var(--radius-pill);
+      padding: 7px 16px;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+    .work-card__more:hover {
+      background: var(--page-brand);
+      color: var(--page-bg);
+    }
 
     /* === 网站作品（纯链接卡片，不展示图片） === */
     .site-grid {
@@ -749,6 +775,7 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
       <li><a href="#ai-videos" data-i18n="nav.ai">AI Videos</a></li>
       <li><a href="#shoot-videos" data-i18n="nav.shoot">Real Footage</a></li>
       <li><a href="#sites" data-i18n="nav.sites">Websites</a></li>
+      <li><a href="#platform-works" data-i18n="nav.platform">Creative & Platform</a></li>
     </ul>
     <div class="nav__right">
       <div class="lang" id="langSwitch">
@@ -1095,10 +1122,48 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
           </div>
         </section>
 
-        <section id="contact">
+        <section id="platform-works">
           <div class="section-head">
             <span class="section-head__num">07</span>
-            <h2 data-i18n="s7.title">联系方式</h2>
+            <h2 data-i18n="s8.title">Creative & Platform Works</h2>
+          </div>
+          <p class="section-lead" data-i18n="s8.lead">A graphic-design short animation and the corporate short-video series previously produced for YouTube — 2 slots, click to play.</p>
+          <div class="work-grid">
+            <figure class="work-card">
+              <div class="work-card__frame">
+                <video controls preload="metadata" playsinline
+                  data-fallback="https://video.aultras-tea.com/Real%20footage%20video/AI%20video/9%E6%9C%8815%E6%97%A5%20%E9%80%9F%E6%BA%B6%E8%8C%B6%E5%8A%9E%E5%85%AC.mp4"
+                  src="https://video.aultras-tea.com/Real%20footage%20video/10%E6%9C%8810%E6%97%A5%E5%9B%BE%E5%BD%A2%E5%88%9B%E6%84%8F%E5%B0%8F%E5%8A%A8%E7%94%BB.mp4">
+                  Your browser does not support video playback.
+                </video>
+              </div>
+              <figcaption>
+                <span class="work-card__tag">Creative 01</span>
+                <h3 data-i18n="s8.t1">Graphic Creative Animation</h3>
+                <p data-i18n="s8.d1">Short animation on a graphic-design theme.</p>
+              </figcaption>
+            </figure>
+            <figure class="work-card">
+              <div class="work-card__frame">
+                <iframe src="https://www.youtube-nocookie.com/embed/vDDFgWPTcow?rel=0"
+                  title="YouTube series video player" data-i18n-title="s8.ift" loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen></iframe>
+              </div>
+              <figcaption>
+                <span class="work-card__tag">YouTube Series</span>
+                <h3 data-i18n="s8.t2">YouTube Corporate Series</h3>
+                <p data-i18n="s8.d2">Corporate short-video series previously produced and published on YouTube.</p>
+                <a class="work-card__more" href="https://youtube.com/shorts/vDDFgWPTcow" target="_blank" rel="noopener" data-i18n="s8.ytl">Watch on YouTube ↗</a>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section id="contact">
+          <div class="section-head">
+            <span class="section-head__num">08</span>
+            <h2 data-i18n="s7.title">Contact</h2>
           </div>
           <p class="section-lead" data-i18n="s7.lead">如果你正在寻找线上的视频生成与剪辑合作伙伴，欢迎通过以下方式与我联系，我可提供完整作品原片与报价方案。</p>
           <dl class="contact-grid">
@@ -1130,6 +1195,7 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
           'nav.overview': '求职意向', 'nav.skills': '核心能力', 'nav.experience': '工作经历',
           'nav.ai': 'AI 视频', 'nav.shoot': '实拍视频', 'nav.sites': '网站作品', 'nav.contact': '联系我',
           'nav.brand': '刘楚江 <span>· 作品集</span>',
+          'nav.platform': '创意与平台',
           'hero.eyebrow': '求职作品集 · Portfolio 2026',
           'hero.h1': '摄影 · AI 视频生成<br>剪辑 · <em>网站搭建</em>',
           'hero.summary': '你好，我是<strong>刘楚江</strong>，5 年内容制作经验。我希望获得一份<strong>线上的视频生成与剪辑工作</strong>（全职 / 兼职 / 远程均可），能独立完成从拍摄、AI 生成、剪辑成片到网站落地的完整内容链路。',
@@ -1189,6 +1255,11 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
           's7.title': '联系方式',
           's7.lead': '如果你正在寻找线上的视频生成与剪辑合作伙伴，欢迎通过以下方式与我联系，我可提供完整作品原片与报价方案。',
           's7.phone': '电话 · Phone', 's7.email': '邮箱 · Email',
+          's8.title': '创意与平台作品',
+          's8.lead': '图形创意短片与此前为企业制作并发布在 YouTube 的系列短视频，共 2 个展示位，点击即可播放。',
+          's8.t1': '图形创意小动画', 's8.d1': '图形创意主题短动画。',
+          's8.t2': 'YouTube 企业系列视频', 's8.d2': '此前为企业制作并发布在 YouTube 的系列短视频。',
+          's8.ytl': '在 YouTube 打开 ↗', 's8.ift': 'YouTube 系列视频播放器',
           'footer.text': '© 2026 刘楚江 · 求职方向：线上视频生成与剪辑'
         },
         en: {
@@ -1196,6 +1267,7 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
           '__desc': 'One-stop content creation: photography, AI video generation, editing and web building. Seeking a remote video generation & editing job.',
           'nav.overview': 'Objective', 'nav.skills': 'Skills', 'nav.experience': 'Experience',
           'nav.ai': 'AI Videos', 'nav.shoot': 'Real Footage', 'nav.sites': 'Websites', 'nav.contact': 'Contact',
+          'nav.platform': 'Creative & Platform',
           'nav.brand': 'Liu Chujiang <span>· Portfolio</span>',
           'hero.eyebrow': 'Job Portfolio · Portfolio 2026',
           'hero.h1': 'Photography · AI Video<br>Editing · <em>Web Building</em>',
@@ -1256,6 +1328,11 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
           's7.title': 'Contact',
           's7.lead': "If you're looking for a remote video generation and editing partner, feel free to reach out — I can share full original cuts and a quote.",
           's7.phone': 'Phone', 's7.email': 'Email',
+          's8.title': 'Creative & Platform Works',
+          's8.lead': 'A graphic-design short animation and the corporate short-video series previously produced for YouTube — 2 slots, click to play.',
+          's8.t1': 'Graphic Creative Animation', 's8.d1': 'Short animation on a graphic-design theme.',
+          's8.t2': 'YouTube Corporate Series', 's8.d2': 'Corporate short-video series previously produced and published on YouTube.',
+          's8.ytl': 'Watch on YouTube ↗', 's8.ift': 'YouTube series video player',
           'footer.text': '© 2026 Liu Chujiang · Seeking: remote video generation & editing'
         },
         fr: {
@@ -1263,6 +1340,7 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
           '__desc': "Création de contenu tout-en-un : photographie, génération vidéo IA, montage et création de sites. Recherche un poste en ligne de génération et montage vidéo.",
           'nav.overview': 'Objectif', 'nav.skills': 'Compétences', 'nav.experience': 'Expérience',
           'nav.ai': 'Vidéos IA', 'nav.shoot': 'Captages réels', 'nav.sites': 'Sites', 'nav.contact': 'Contact',
+          'nav.platform': 'Créations & Plateformes',
           'nav.brand': 'Liu Chujiang <span>· Portfolio</span>',
           'hero.eyebrow': 'Portfolio de candidature · 2026',
           'hero.h1': 'Photographie · Vidéo IA<br>Montage · <em>Création de sites</em>',
@@ -1323,6 +1401,11 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
           's7.title': 'Contact',
           's7.lead': 'Si vous cherchez un partenaire en ligne pour la génération et le montage vidéo, contactez-moi ; je peux fournir les films originaux complets et un devis.',
           's7.phone': 'Téléphone', 's7.email': 'E-mail',
+          's8.title': 'Œuvres créatives & plateformes',
+          's8.lead': "Une animation courte au design graphique et la série de vidéos d'entreprise réalisée pour YouTube — 2 emplacements, cliquez pour lire.",
+          's8.t1': 'Animation créative graphique', 's8.d1': 'Courte animation sur un thème de design graphique.',
+          's8.t2': "Série d'entreprise YouTube", 's8.d2': "Série de vidéos d'entreprise produite et publiée sur YouTube.",
+          's8.ytl': 'Voir sur YouTube ↗', 's8.ift': 'Lecteur de la série YouTube',
           'footer.text': '© 2026 Liu Chujiang · Recherche : génération et montage vidéo en ligne'
         },
         de: {
@@ -1330,6 +1413,7 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
           '__desc': 'Content-Produktion aus einer Hand: Fotografie, KI-Videogenerierung, Schnitt und Websitebau. Suche Online-Stelle für Videoerstellung und -schnitt.',
           'nav.overview': 'Ziel', 'nav.skills': 'Kenntnisse', 'nav.experience': 'Erfahrung',
           'nav.ai': 'KI-Videos', 'nav.shoot': 'Realaufnahmen', 'nav.sites': 'Webseiten', 'nav.contact': 'Kontakt',
+          'nav.platform': 'Kreativ & Plattform',
           'nav.brand': 'Liu Chujiang <span>· Portfolio</span>',
           'hero.eyebrow': 'Bewerbungsportfolio · 2026',
           'hero.h1': 'Fotografie · AI-Video<br>Schnitt · <em>Webentwicklung</em>',
@@ -1390,6 +1474,11 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
           's7.title': 'Kontakt',
           's7.lead': 'Wenn Sie einen Partner für Online-Videoerstellung und -schnitt suchen, melden Sie sich gern; ich liefere Originalfassungen und ein Angebot.',
           's7.phone': 'Telefon', 's7.email': 'E-Mail',
+          's8.title': 'Kreative & Plattform-Werke',
+          's8.lead': 'Eine Grafik-Design-Kurzanimation und die zuvor für YouTube produzierte Unternehmensvideo-Serie — 2 Plätze, zum Abspielen klicken.',
+          's8.t1': 'Grafische Kreativ-Animation', 's8.d1': 'Kurzanimation mit grafischem Design-Motiv.',
+          's8.t2': 'YouTube-Unternehmensserie', 's8.d2': 'Für YouTube produzierte und veröffentlichte Unternehmensvideo-Serie.',
+          's8.ytl': 'Auf YouTube ansehen ↗', 's8.ift': 'YouTube-Serien-Videoplayer',
           'footer.text': '© 2026 Liu Chujiang · Sucht: Online-Videoerstellung & -schnitt'
         },
         ja: {
@@ -1397,6 +1486,7 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
           '__desc': '撮影・AI動画生成・編集・サイト制作のワンストップ制作。オンラインの動画生成・編集の仕事を探しています。',
           'nav.overview': '求職意向', 'nav.skills': 'スキル', 'nav.experience': '経歴',
           'nav.ai': 'AI動画', 'nav.shoot': '実写映像', 'nav.sites': '制作サイト', 'nav.contact': '連絡先',
+          'nav.platform': 'クリエイティブ＆プラットフォーム',
           'nav.brand': '劉楚江 <span>· ポートフォリオ</span>',
           'hero.eyebrow': '求職ポートフォリオ · 2026',
           'hero.h1': '撮影 · AI動画生成<br>編集 · <em>サイト制作</em>',
@@ -1457,6 +1547,11 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
           's7.title': '連絡先',
           's7.lead': 'オンラインの動画生成・編集パートナーをお探しでしたら、ご連絡ください。完成原画と見積もりを提出できます。',
           's7.phone': '電話', 's7.email': 'メール',
+          's8.title': 'クリエイティブ＆プラットフォーム作品',
+          's8.lead': 'グラフィックデザインの短編アニメーションと、過去にYouTube向けに制作した企業動画シリーズ — 2枠、クリックで再生できます。',
+          's8.t1': 'グラフィッククリエイティブアニメ', 's8.d1': 'グラフィックデザインをテーマにした短編アニメーション。',
+          's8.t2': 'YouTube企業シリーズ', 's8.d2': '過去に制作しYouTubeで公開した企業ショート動画シリーズ。',
+          's8.ytl': 'YouTubeで見る ↗', 's8.ift': 'YouTubeシリーズ動画プレーヤー',
           'footer.text': '© 2026 劉楚江 · 希望職種：オンライン動画生成・編集'
         },
         ru: {
@@ -1464,6 +1559,7 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
           '__desc': 'Контент под ключ: фотография, генерация AI-видео, монтаж и создание сайтов. Ищу удалённую работу по генерации и монтажу видео.',
           'nav.overview': 'Цель', 'nav.skills': 'Навыки', 'nav.experience': 'Опыт',
           'nav.ai': 'AI-видео', 'nav.shoot': 'Реальные видео', 'nav.sites': 'Сайты', 'nav.contact': 'Контакты',
+          'nav.platform': 'Креатив и платформы',
           'nav.brand': 'Лю Чуцзян <span>· Портфолио</span>',
           'hero.eyebrow': 'Портфолио · 2026',
           'hero.h1': 'Фото · AI-видео<br>Монтаж · <em>Сайты</em>',
@@ -1524,6 +1620,11 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
           's7.title': 'Контакты',
           's7.lead': 'Если ищете удалённого партнёра по генерации и монтажу видео, свяжитесь со мной — предоставлю оригиналы и расчёт стоимости.',
           's7.phone': 'Телефон', 's7.email': 'Почта',
+          's8.title': 'Креативные и платформенные работы',
+          's8.lead': 'Графическая анимация и корпоративная серия видео, ранее созданная для YouTube — 2 слота, нажмите для воспроизведения.',
+          's8.t1': 'Графическая креативная анимация', 's8.d1': 'Короткая анимация на графическую тему.',
+          's8.t2': 'Корпоративная серия YouTube', 's8.d2': 'Корпоративные короткие видео, ранее созданные и опубликованные на YouTube.',
+          's8.ytl': 'Смотреть на YouTube ↗', 's8.ift': 'Проигрыватель серии YouTube',
           'footer.text': '© 2026 Лю Чуцзян · Ищу: удалённую генерацию и монтаж видео'
         }
       };
@@ -1542,6 +1643,10 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
         document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
           var k = el.getAttribute('data-i18n-html');
           if (dict[k] != null) el.innerHTML = dict[k];
+        });
+        document.querySelectorAll('[data-i18n-title]').forEach(function (el) {
+          var k = el.getAttribute('data-i18n-title');
+          if (dict[k] != null) el.setAttribute('title', dict[k]);
         });
         document.documentElement.lang = (lang === 'zh') ? 'zh-CN' : lang;
         document.title = dict['__title'];
