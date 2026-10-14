@@ -398,7 +398,7 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
     /* === 数据条 === */
     .stats {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: var(--space-4);
       border-block: 1px solid var(--page-border);
       padding-block: var(--space-5);
@@ -799,12 +799,12 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
         <div class="report-intro__content">
           <p class="intro-eyebrow" data-i18n="hero.eyebrow">Job Portfolio · Portfolio 2026</p>
           <h1 data-i18n-html="hero.h1">Photography · AI Video<br>Editing · <em>Web Building</em></h1>
-          <p class="report-intro__summary" data-i18n-html="hero.summary">Hi, I'm <strong>Liu Chujiang</strong> with 5 years of content production experience. I'm looking for a <strong>remote video generation and editing job</strong> (full-time / part-time / remote), able to run the whole pipeline from shooting and AI generation to final edit and website delivery.</p>
+          <p class="report-intro__summary" data-i18n-html="hero.summary">Hi, I'm <strong>Liu Chujiang</strong> with 3.5+ years of content production experience. I'm looking for a <strong>remote video generation and editing job</strong> (full-time / part-time / remote), able to run the whole pipeline from shooting and AI generation to final edit and website delivery.</p>
           <ul class="hero-meta">
             <li data-i18n-html="hero.meta1"><strong>Liu Chujiang</strong> · Male · 24</li>
-            <li data-i18n="hero.meta2">5 years of experience</li>
+            <li data-i18n="hero.meta2">3.5+ years of experience</li>
             <li data-i18n="hero.meta3">Available immediately</li>
-            <li data-i18n="hero.meta4">Remote · Desired city: Lanzhou</li>
+            <li data-i18n="hero.meta4">Remote-first</li>
           </ul>
           <div class="hero-actions">
             <a class="btn btn--primary" href="#ai-videos" data-i18n="hero.cta1">View Work ↓</a>
@@ -818,7 +818,7 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
       <main>
         <div class="stats" aria-label="Core figures">
           <div class="stat">
-            <div class="stat__num" data-i18n="stats.n1">5 Yrs</div>
+            <div class="stat__num" data-i18n="stats.n1">3.5+ Yrs</div>
             <div class="stat__label" data-i18n="stats.l1">in new-media content production</div>
           </div>
           <div class="stat">
@@ -832,6 +832,10 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
           <div class="stat">
             <div class="stat__num" data-i18n="stats.n4">2</div>
             <div class="stat__label" data-i18n="stats.l4">corporate trade sites built from scratch</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num" data-i18n="stats.n5">45K</div>
+            <div class="stat__label" data-i18n="stats.l5">monthly site visits (avg)</div>
           </div>
         </div>
 
@@ -885,7 +889,7 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
             <span class="section-head__num">03</span>
             <h2 data-i18n="s3.title">工作经历</h2>
           </div>
-          <p class="section-lead" data-i18n="s3.lead">5 年新媒体与内容制作经验，覆盖拍摄执行、AI 内容生产、团队管理与项目筹建。</p>
+          <p class="section-lead" data-i18n="s3.lead">3.5+ 年新媒体与内容制作经验，覆盖拍摄执行、AI 内容生产、团队管理与项目筹建。</p>
           <ul class="timeline">
             <li>
               <span class="period" data-i18n="s3.e1t">2026.03 – 至今</span>
@@ -959,8 +963,8 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
               </div>
               <figcaption>
                 <span class="work-card__tag">AI Video 03</span>
-                <h3 data-i18n="s4.t3">AI 短片 · 9 月 15 日</h3>
-                <p data-i18n="s4.d3">AI 生成短片 · 9 月版本（MOV 原片）。</p>
+                <h3 data-i18n="s4.t3">AI 短片 · 九月篇</h3>
+                <p data-i18n="s4.d3">AI 生成短片 · 九月篇（MOV 原片）。</p>
               </figcaption>
             </figure>
             <figure class="work-card">
@@ -973,7 +977,7 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
               </div>
               <figcaption>
                 <span class="work-card__tag">AI Video 04</span>
-                <h3 data-i18n="s4.t4">速溶茶 · 修改版 2</h3>
+                <h3 data-i18n="s4.t4">速溶茶产品种草短片</h3>
                 <p data-i18n="s4.d4">速溶茶产品场景化 AI 种草短片。</p>
               </figcaption>
             </figure>
@@ -1067,7 +1071,7 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
               </div>
               <figcaption>
                 <span class="work-card__tag">Real Footage 04</span>
-                <h3 data-i18n="s5.t4">毛晓薇 · 抖音短片</h3>
+                <h3 data-i18n="s5.t4">客户定制抖音短片</h3>
                 <p data-i18n="s5.d4">抖音平台实拍短片（MOV 原片）。</p>
               </figcaption>
             </figure>
@@ -1081,8 +1085,8 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
               </div>
               <figcaption>
                 <span class="work-card__tag">Real Footage 05</span>
-                <h3 data-i18n="s5.t5">光影版本 5</h3>
-                <p data-i18n="s5.d5">实拍光影调性版本成片。</p>
+                <h3 data-i18n="s5.t5">品牌光影调性片</h3>
+                <p data-i18n="s5.d5">实拍光影调性成片。</p>
               </figcaption>
             </figure>
           </div>
@@ -1175,6 +1179,10 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
               <dt data-i18n="s7.email">邮箱 · Email</dt>
               <dd><a href="mailto:15842823831@163.com">15842823831@163.com</a></dd>
             </div>
+            <div class="contact-card">
+              <dt>微信 · WeChat</dt>
+              <dd>chuan1584282</dd>
+            </div>
           </dl>
         </section>
       </main>
@@ -1198,14 +1206,14 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
           'nav.platform': '创意与平台',
           'hero.eyebrow': '求职作品集 · Portfolio 2026',
           'hero.h1': '摄影 · AI 视频生成<br>剪辑 · <em>网站搭建</em>',
-          'hero.summary': '你好，我是<strong>刘楚江</strong>，5 年内容制作经验。我希望获得一份<strong>线上的视频生成与剪辑工作</strong>（全职 / 兼职 / 远程均可），能独立完成从拍摄、AI 生成、剪辑成片到网站落地的完整内容链路。',
+          'hero.summary': '你好，我是<strong>刘楚江</strong>，3.5+ 年内容制作经验。我希望获得一份<strong>线上的视频生成与剪辑工作</strong>（全职 / 兼职 / 远程均可），能独立完成从拍摄、AI 生成、剪辑成片到网站落地的完整内容链路。',
           'hero.meta1': '<strong>刘楚江</strong> · 男 · 24 岁',
-          'hero.meta2': '5 年工作经验', 'hero.meta3': '随时到岗', 'hero.meta4': '线上远程 · 期望城市兰州',
+          'hero.meta2': '3.5+ 年工作经验', 'hero.meta3': '随时到岗', 'hero.meta4': '线上远程 · Remote-first',
           'hero.cta1': '查看作品 ↓', 'hero.cta2': '联系方式',
-          'stats.n1': '5 年', 'stats.l1': '新媒体内容制作经验',
+          'stats.n1': '3.5+ 年', 'stats.l1': '新媒体内容制作经验',
           'stats.n2': '10+', 'stats.l2': '条 AI 产品宣传视频',
           'stats.n3': '6 套', 'stats.l3': '原创角色资产',
-          'stats.n4': '2 个', 'stats.l4': '从 0 到 1 企业外贸官网',
+          'stats.n4': '2 个', 'stats.l4': '从 0 到 1 企业外贸官网', 'stats.n5': '45K', 'stats.l5': '网站月均访问',
           's1.title': '求职意向',
           's1.summary': '我希望获得一份线上的视频生成与剪辑工作，可承接 AI 视频生成、实拍视频剪辑与配套网站搭建任务；远程交付，按项目合作或长期合作均可。',
           's1.p1': '现就职于湘丰茶业集团，负责 AI 视频与视觉内容业务：累计产出 AI 产品宣传视频 10 余条、原创角色资产 6 套，从 0 到 1 独立交付 2 个企业外贸官网与公司级线上素材库，实拍剪辑产品视频数十支并分发至天猫、淘宝、京东、视频号等平台。',
@@ -1218,7 +1226,7 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
           's2.c2n': '02 / 生成', 's2.c2t': 'AI 视频生成', 's2.c2d': '参与过漫剧制作，具备镜头拆分与脚本编写能力，可完成角色设定、资产构建、AI 生成到成片交付的完整流程。',
           's2.c3n': '03 / 剪辑', 's2.c3t': '视频剪辑', 's2.c3d': '节奏把控、字幕包装、音效配乐与调色，成片适配天猫、抖音、视频号等主流平台。',
           's2.c4n': '04 / 建站', 's2.c4t': '网站搭建', 's2.c4d': '已从 0 到 1 独立交付 2 个企业外贸官网，并配套搭建公司级线上素材库，支撑跨地域团队即取即用。',
-          's3.title': '工作经历', 's3.lead': '5 年新媒体与内容制作经验，覆盖拍摄执行、AI 内容生产、团队管理与项目筹建。',
+          's3.title': '工作经历', 's3.lead': '3.5+ 年新媒体与内容制作经验，覆盖拍摄执行、AI 内容生产、团队管理与项目筹建。',
           's3.e1t': '2026.03 – 至今', 's3.e1h': '湘丰茶业集团有限公司 · 拍摄 / AI 视频制作',
           's3.e1p': '负责公司 AI 产品视频生成业务，统筹角色设定、资产构建到成片交付全流程，创作 6 套原创角色资产、产出 AI 宣传视频 10 余条；从 0 到 1 搭建 2 个企业外贸官网与公司级线上素材库；统筹产品实拍与后期，成片分发至天猫、淘宝、京东、视频号等平台。',
           's3.e2t': '2024.04 – 2026.02', 's3.e2h': '长沙 11 豆文化旅游有限公司 · 门店店长',
@@ -1233,8 +1241,8 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
           's4.lead': 'AI 生成短片、概念影像与创意视频，共 6 个展示位。视频均托管在线上，点击即可播放；个别视频无法播放时会自动替换为备用片源。',
           's4.t1': '小满 · 最终版', 's4.d1': '节气「小满」主题 AI 生成短片。',
           's4.t2': '世界环境日 2', 's4.d2': '世界环境日主题 AI 生成短片。',
-          's4.t3': 'AI 短片 · 9 月 15 日', 's4.d3': 'AI 生成短片 · 9 月版本（MOV 原片）。',
-          's4.t4': '速溶茶 · 修改版 2', 's4.d4': '速溶茶产品场景化 AI 种草短片。',
+          's4.t3': 'AI 短片 · 九月篇', 's4.d3': 'AI 生成短片 · 九月篇（MOV 原片）。',
+          's4.t4': '速溶茶产品种草短片', 's4.d4': '速溶茶产品场景化 AI 种草短片。',
           's4.t5': 'AI 茶园', 's4.d5': 'AI 茶园场景概念影像。',
           's4.t6': '夏至', 's4.d6': '节气「夏至」主题 AI 生成短片。',
           's5.title': '实拍视频作品',
@@ -1242,8 +1250,8 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
           's5.t1': '湘丰遴选 · 成片', 's5.d1': '湘丰遴选产品实拍与后期成片。',
           's5.t2': '福湘茗露', 's5.d2': '福湘茗露产品实拍成片。',
           's5.t3': '你就是山', 's5.d3': '品牌主题实拍短片。',
-          's5.t4': '毛晓薇 · 抖音短片', 's5.d4': '抖音平台实拍短片（MOV 原片）。',
-          's5.t5': '光影版本 5', 's5.d5': '实拍光影调性版本成片。',
+          's5.t4': '客户定制抖音短片', 's5.d4': '抖音平台实拍短片（MOV 原片）。',
+          's5.t5': '品牌光影调性片', 's5.d5': '实拍光影调性成片。',
           's6.title': '网站作品',
           's6.lead': '从 0 到 1 独立搭建并交付的企业官网，共 2 个展示位。此处仅展示访问链接与站点内容，点击即可访问正式网址。',
           's6.s1t': '湘丰茶业官网', 's6.s1d': '湘丰茶业集团企业官网，独立完成站点搭建、内容上线与持续维护。',
@@ -1271,14 +1279,14 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
           'nav.brand': 'Liu Chujiang <span>· Portfolio</span>',
           'hero.eyebrow': 'Job Portfolio · Portfolio 2026',
           'hero.h1': 'Photography · AI Video<br>Editing · <em>Web Building</em>',
-          'hero.summary': "Hi, I'm <strong>Liu Chujiang</strong> with 5 years of content production experience. I'm looking for a <strong>remote video generation and editing job</strong> (full-time / part-time / remote), able to run the whole pipeline from shooting and AI generation to final edit and website delivery.",
+          'hero.summary': "Hi, I'm <strong>Liu Chujiang</strong> with 3.5+ years of content production experience. I'm looking for a <strong>remote video generation and editing job</strong> (full-time / part-time / remote), able to run the whole pipeline from shooting and AI generation to final edit and website delivery.",
           'hero.meta1': '<strong>Liu Chujiang</strong> · Male · 24',
-          'hero.meta2': '5 years of experience', 'hero.meta3': 'Available immediately', 'hero.meta4': 'Remote · Desired city: Lanzhou',
+          'hero.meta2': '3.5+ years of experience', 'hero.meta3': 'Available immediately', 'hero.meta4': 'Remote-first',
           'hero.cta1': 'View Work ↓', 'hero.cta2': 'Contact',
-          'stats.n1': '5 Yrs', 'stats.l1': 'in new-media content production',
+          'stats.n1': '3.5+ Yrs', 'stats.l1': 'in new-media content production',
           'stats.n2': '10+', 'stats.l2': 'AI promo videos produced',
           'stats.n3': '6 Sets', 'stats.l3': 'original character assets',
-          'stats.n4': '2', 'stats.l4': 'corporate trade sites built from scratch',
+          'stats.n4': '2', 'stats.l4': 'corporate trade sites built from scratch', 'stats.n5': '45K', 'stats.l5': 'monthly site visits (avg)',
           's1.title': 'Job Objective',
           's1.summary': "I'm looking for a remote video generation and editing role, taking on AI video generation, real-footage editing and related website projects; delivered remotely, per-project or long-term.",
           's1.p1': 'Currently at Xiangfeng Tea Group, responsible for AI video and visual content: 10+ AI promo videos and 6 original character asset sets produced, 2 corporate foreign-trade websites and a company-level asset library built from 0 to 1, plus dozens of product videos edited and distributed to Tmall, Taobao, JD, WeChat Channels and more.',
@@ -1291,7 +1299,7 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
           's2.c2n': '02 / GENERATE', 's2.c2t': 'AI Video Generation', 's2.c2d': 'Experienced in comic-drama production, with shot breakdown and scriptwriting skills, covering character design, asset building, AI generation and final delivery.',
           's2.c3n': '03 / EDIT', 's2.c3t': 'Video Editing', 's2.c3d': 'Pacing, subtitles, sound design and color grading, with finals tuned for Tmall, Douyin, WeChat Channels and other platforms.',
           's2.c4n': '04 / WEB', 's2.c4t': 'Website Building', 's2.c4d': 'Delivered 2 corporate foreign-trade sites from 0 to 1, plus a company-level online asset library for cross-region teams.',
-          's3.title': 'Work Experience', 's3.lead': '5 years in new media and content production, covering shooting, AI content, team management and project setup.',
+          's3.title': 'Work Experience', 's3.lead': '3.5+ years in new media and content production, covering shooting, AI content, team management and project setup.',
           's3.e1t': '2026.03 – Present', 's3.e1h': 'Xiangfeng Tea Group Co., Ltd. · Shooting / AI Video Production',
           's3.e1p': "Responsible for the company's AI product video business, leading the full pipeline from character design and asset building to final delivery; created 6 original character asset sets and 10+ AI promo videos; built 2 corporate foreign-trade websites and a company-level asset library from scratch; oversaw product shooting and post-production, with finals distributed to Tmall, Taobao, JD, WeChat Channels and more.",
           's3.e2t': '2024.04 – 2026.02', 's3.e2h': 'Changsha 11dou Culture & Tourism Co., Ltd. · Store Manager',
@@ -1306,8 +1314,8 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
           's4.lead': 'AI-generated shorts, concept films and creative videos — 6 slots. All videos are hosted online and playable on click; if a video fails to play, a backup source is applied automatically.',
           's4.t1': 'Xiaoman · Final Cut', 's4.d1': 'AI short on the solar term "Xiaoman".',
           's4.t2': 'World Environment Day 2', 's4.d2': 'AI short for World Environment Day.',
-          's4.t3': 'AI Short · Sep 15', 's4.d3': 'AI-generated short · September version (MOV original).',
-          's4.t4': 'Instant Tea · Rev. 2', 's4.d4': 'Scenario-based AI promo short for instant tea.',
+          's4.t3': 'AI Short · September Cut', 's4.d3': 'AI-generated short · September cut (MOV original).',
+          's4.t4': 'Instant Tea Promo', 's4.d4': 'Scenario-based AI promo short for instant tea.',
           's4.t5': 'AI Tea Garden', 's4.d5': 'Concept visual of an AI-generated tea garden.',
           's4.t6': 'Summer Solstice', 's4.d6': 'AI short on the solar term "Summer Solstice".',
           's5.title': 'Real Footage Works',
@@ -1315,8 +1323,8 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
           's5.t1': 'Xiangfeng Selection · Final', 's5.d1': 'Product shoot and post-production final for Xiangfeng Selection.',
           's5.t2': 'Fuxiang Minglu', 's5.d2': 'Final product shoot for Fuxiang Minglu.',
           's5.t3': 'You Are the Mountain', 's5.d3': 'Brand-themed real-footage short.',
-          's5.t4': 'Mao Xiaowei · Douyin Short', 's5.d4': 'Real-footage short for Douyin (MOV original).',
-          's5.t5': 'Light & Shadow v5', 's5.d5': 'Final cut with light-and-shadow tonality.',
+          's5.t4': 'Client Douyin Short', 's5.d4': 'Real-footage short for Douyin (MOV original).',
+          's5.t5': 'Light & Shadow Brand Film', 's5.d5': 'Final cut with light-and-shadow tonality.',
           's6.title': 'Websites',
           's6.lead': '2 corporate websites built and delivered from 0 to 1. Only visit links and site contents are shown here; click to open the live site.',
           's6.s1t': 'Xiangfeng Tea Official Site', 's6.s1d': 'Corporate site of Xiangfeng Tea Group; built, populated and maintained independently.',
@@ -1344,14 +1352,14 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
           'nav.brand': 'Liu Chujiang <span>· Portfolio</span>',
           'hero.eyebrow': 'Portfolio de candidature · 2026',
           'hero.h1': 'Photographie · Vidéo IA<br>Montage · <em>Création de sites</em>',
-          'hero.summary': "Bonjour, je suis <strong>Liu Chujiang</strong>, avec 5 ans d'expérience en production de contenu. Je cherche un <strong>poste en ligne de génération et de montage vidéo</strong> (temps plein / temps partiel / à distance), capable d'assurer toute la chaîne, du tournage à la génération IA, du montage au site web.",
+          'hero.summary': "Bonjour, je suis <strong>Liu Chujiang</strong>, avec 3.5+ ans d'expérience en production de contenu. Je cherche un <strong>poste en ligne de génération et de montage vidéo</strong> (temps plein / temps partiel / à distance), capable d'assurer toute la chaîne, du tournage à la génération IA, du montage au site web.",
           'hero.meta1': '<strong>Liu Chujiang</strong> · Homme · 24 ans',
-          'hero.meta2': "5 ans d'expérience", 'hero.meta3': 'Disponible immédiatement', 'hero.meta4': 'À distance · Ville souhaitée : Lanzhou',
+          'hero.meta2': "3.5+ ans d'expérience", 'hero.meta3': 'Disponible immédiatement', 'hero.meta4': 'À distance · Remote-first',
           'hero.cta1': 'Voir les projets ↓', 'hero.cta2': 'Contact',
-          'stats.n1': '5 ans', 'stats.l1': 'de production de contenu média',
+          'stats.n1': '3.5+ ans', 'stats.l1': 'de production de contenu média',
           'stats.n2': '10+', 'stats.l2': 'vidéos promo IA produites',
           'stats.n3': '6 jeux', 'stats.l3': "d'assets de personnages",
-          'stats.n4': '2', 'stats.l4': 'sites export créés de zéro',
+          'stats.n4': '2', 'stats.l4': 'sites export créés de zéro', 'stats.n5': '45K', 'stats.l5': 'visites mensuelles (moyenne)',
           's1.title': 'Objectif professionnel',
           's1.summary': "Je cherche un poste en ligne de génération et montage vidéo : génération IA, montage de vidéos réelles et création de sites associés ; livraison à distance, à la pige ou sur contrat long.",
           's1.p1': "Actuellement chez Xiangfeng Tea Group, responsable des vidéos IA et du contenu visuel : plus de 10 vidéos promo IA et 6 jeux d'assets originaux produits, 2 sites export et une médiathèque d'entreprise créés de zéro, ainsi que des dizaines de vidéos produit diffusées sur Tmall, Taobao, JD, WeChat, etc.",
@@ -1364,7 +1372,7 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
           's2.c2n': '02 / GÉNÉRATION', 's2.c2t': 'Génération vidéo IA', 's2.c2d': 'Expérience en production de manju, découpage de plans et scénario, du design des personnages à la livraison finale.',
           's2.c3n': '03 / MONTAGE', 's2.c3t': 'Montage vidéo', 's2.c3d': 'Rythme, sous-titres, son et étalonnage, finals adaptés à Tmall, Douyin, WeChat et autres plateformes.',
           's2.c4n': '04 / SITES', 's2.c4t': 'Création de sites', 's2.c4d': '2 sites export livrés de 0 à 1, plus une médiathèque d\'entreprise en ligne pour les équipes multi-sites.',
-          's3.title': 'Expérience professionnelle', 's3.lead': '5 ans en nouveaux médias et production de contenu : tournage, contenu IA, management d\'équipe et lancement de projets.',
+          's3.title': 'Expérience professionnelle', 's3.lead': '3.5+ ans en nouveaux médias et production de contenu : tournage, contenu IA, management d\'équipe et lancement de projets.',
           's3.e1t': '2026.03 – Aujourd\'hui', 's3.e1h': 'Xiangfeng Tea Group · Tournage / Production vidéo IA',
           's3.e1p': "Responsable de la génération de vidéos produit IA : direction du cycle complet, du design des personnages à la livraison ; 6 jeux d'assets originaux et plus de 10 vidéos promo IA ; 2 sites export et une médiathèque créés de zéro ; suivi du tournage et de la post-production, diffusion sur Tmall, Taobao, JD, WeChat, etc.",
           's3.e2t': '2024.04 – 2026.02', 's3.e2h': 'Changsha 11dou Culture & Tourism · Responsable de magasin',
@@ -1379,8 +1387,8 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
           's4.lead': 'Courts métrages IA, films conceptuels et vidéos créatives — 6 emplacements. Vidéos hébergées en ligne, lecture au clic ; en cas d\'échec, une source de secours est appliquée automatiquement.',
           's4.t1': 'Xiaoman · Version finale', 's4.d1': 'Court métrage IA sur le terme solaire « Xiaoman ».',
           's4.t2': 'Jour mondial de l\'environnement 2', 's4.d2': 'Court métrage IA pour le Jour mondial de l\'environnement.',
-          's4.t3': 'Court IA · 15 sept.', 's4.d3': 'Court métrage IA · version septembre (MO original).',
-          's4.t4': 'Thé instantané · Rév. 2', 's4.d4': 'Court IA scénarisé pour le thé instantané.',
+          's4.t3': 'Court IA · Septembre', 's4.d3': 'Court métrage IA · version septembre (MO original).',
+          's4.t4': 'Thé instantané · Promo', 's4.d4': 'Court IA scénarisé pour le thé instantané.',
           's4.t5': 'Jardin de thé IA', 's4.d5': 'Visuel conceptuel d\'un jardin de thé IA.',
           's4.t6': 'Solstice d\'été', 's4.d6': 'Court métrage IA sur le terme solaire « solstice d\'été ».',
           's5.title': 'Captages réels',
@@ -1388,8 +1396,8 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
           's5.t1': 'Sélection Xiangfeng · Film final', 's5.d1': 'Tournage et post-production du produit Sélection Xiangfeng.',
           's5.t2': 'Fuxiang Minglu', 's5.d2': 'Film final du produit Fuxiang Minglu.',
           's5.t3': 'Tu es la montagne', 's5.d3': 'Court métrage réel sur le thème de la marque.',
-          's5.t4': 'Mao Xiaowei · Court Douyin', 's5.d4': 'Court réel pour Douyin (MO original).',
-          's5.t5': 'Lumière et ombre v5', 's5.d5': 'Version finale sur la tonalité lumière-ombre.',
+          's5.t4': 'Client · Court Douyin', 's5.d4': 'Court réel pour Douyin (MO original).',
+          's5.t5': 'Lumière et ombre · Film de marque', 's5.d5': 'Version finale sur la tonalité lumière-ombre.',
           's6.title': 'Sites web',
           's6.lead': "2 sites d'entreprise créés et livrés de 0 à 1. Seuls les liens et le contenu des sites sont affichés ici ; cliquez pour ouvrir le site en ligne.",
           's6.s1t': 'Site officiel Xiangfeng Tea', 's6.s1d': 'Site du groupe Xiangfeng Tea ; création, mise en ligne et maintenance autonomes.',
@@ -1417,14 +1425,14 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
           'nav.brand': 'Liu Chujiang <span>· Portfolio</span>',
           'hero.eyebrow': 'Bewerbungsportfolio · 2026',
           'hero.h1': 'Fotografie · AI-Video<br>Schnitt · <em>Webentwicklung</em>',
-          'hero.summary': 'Hallo, ich bin <strong>Liu Chujiang</strong> mit 5 Jahren Erfahrung in der Content-Produktion. Ich suche eine <strong>Online-Stelle für Videoerstellung und -schnitt</strong> (Vollzeit / Teilzeit / Remote) und kann die gesamte Kette von Dreh, KI-Generierung, Schnitt bis zur Website liefern.',
+          'hero.summary': 'Hallo, ich bin <strong>Liu Chujiang</strong> mit 3.5+ Jahren Erfahrung in der Content-Produktion. Ich suche eine <strong>Online-Stelle für Videoerstellung und -schnitt</strong> (Vollzeit / Teilzeit / Remote) und kann die gesamte Kette von Dreh, KI-Generierung, Schnitt bis zur Website liefern.',
           'hero.meta1': '<strong>Liu Chujiang</strong> · Männlich · 24',
-          'hero.meta2': '5 Jahre Erfahrung', 'hero.meta3': 'Sofort verfügbar', 'hero.meta4': 'Remote · Wunschstadt: Lanzhou',
+          'hero.meta2': '3.5+ Jahre Erfahrung', 'hero.meta3': 'Sofort verfügbar', 'hero.meta4': 'Remote-first',
           'hero.cta1': 'Werke ansehen ↓', 'hero.cta2': 'Kontakt',
-          'stats.n1': '5 Jahre', 'stats.l1': 'Medien-Content-Produktion',
+          'stats.n1': '3.5+ Jahre', 'stats.l1': 'Medien-Content-Produktion',
           'stats.n2': '10+', 'stats.l2': 'KI-Promovideos erstellt',
           'stats.n3': '6 Sets', 'stats.l3': 'Original-Charakter-Assets',
-          'stats.n4': '2', 'stats.l4': 'Firmen-Exportwebsites ab null',
+          'stats.n4': '2', 'stats.l4': 'Firmen-Exportwebsites ab null', 'stats.n5': '45K', 'stats.l5': 'monatliche Besuche (Ø)',
           's1.title': 'Berufsziel',
           's1.summary': 'Ich suche eine Online-Stelle für Videoerstellung und -schnitt: KI-Videogeneration, Schnitt von Realaufnahmen und zugehörige Websites; Lieferung remote, projektweise oder langfristig.',
           's1.p1': 'Derzeit bei Xiangfeng Tea Group, zuständig für KI-Videos und visuelle Inhalte: über 10 KI-Promovideos und 6 Original-Charakter-Asset-Sets produziert, 2 Export-Websites und eine firmeninterne Mediathek von null aufgebaut, dazu dutzende Produktvideos für Tmall, Taobao, JD, WeChat Channels usw.',
@@ -1437,7 +1445,7 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
           's2.c2n': '02 / GENERIEREN', 's2.c2t': 'KI-Videogeneration', 's2.c2d': 'Erfahrung in der Manju-Produktion, Shot-Splitting und Drehbuch; von Charakterdesign und Asset-Aufbau bis zur finalen KI-Lieferung.',
           's2.c3n': '03 / SCHNITT', 's2.c3t': 'Videoschnitt', 's2.c3d': 'Rhythmus, Untertitel, Sounddesign und Color Grading; Finale für Tmall, Douyin, WeChat Channels u. a. optimiert.',
           's2.c4n': '04 / WEB', 's2.c4t': 'Webentwicklung', 's2.c4d': '2 Export-Websites von 0 auf 1 geliefert, dazu eine firmeninterne Online-Mediathek für verteilte Teams.',
-          's3.title': 'Berufserfahrung', 's3.lead': '5 Jahre in New Media und Content-Produktion: Dreh, KI-Content, Teamaufbau und Projektvorbereitung.',
+          's3.title': 'Berufserfahrung', 's3.lead': '3.5+ Jahre in New Media und Content-Produktion: Dreh, KI-Content, Teamaufbau und Projektvorbereitung.',
           's3.e1t': '2026.03 – Heute', 's3.e1h': 'Xiangfeng Tea Group Co., Ltd. · Dreh / KI-Videoerstellung',
           's3.e1p': 'Verantwortlich für die KI-Produktvideo-Erstellung: Charakterdesign, Asset-Aufbau bis zur Auslieferung; 6 Original-Asset-Sets und über 10 KI-Promovideos; 2 Export-Websites und eine Mediathek von null; Dreh und Postproduktion, Verteilung an Tmall, Taobao, JD, WeChat Channels usw.',
           's3.e2t': '2024.04 – 2026.02', 's3.e2h': 'Changsha 11dou Culture & Tourism Co., Ltd. · Filialleiter',
@@ -1452,8 +1460,8 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
           's4.lead': 'KI-generierte Kurzfilme, Konzeptfilme und kreative Videos – 6 Plätze. Alle Videos sind online gehostet und starten per Klick; bei Fehlern wird automatisch eine Backup-Quelle verwendet.',
           's4.t1': 'Xiaoman · Finalfassung', 's4.d1': 'KI-Kurzfilm zum Sonnentermin „Xiaoman“.',
           's4.t2': 'Weltumwelttag 2', 's4.d2': 'KI-Kurzfilm zum Weltumwelttag.',
-          's4.t3': 'KI-Kurzfilm · 15. Sept.', 's4.d3': 'KI-Kurzfilm · Septemberfassung (MOV-Original).',
-          's4.t4': 'Instanttee · Rev. 2', 's4.d4': 'Szenario-basierter KI-Reklamefilm für Instanttee.',
+          's4.t3': 'KI-Kurzfilm · September', 's4.d3': 'KI-Kurzfilm · Septemberfassung (MOV-Original).',
+          's4.t4': 'Instanttee · Promo', 's4.d4': 'Szenario-basierter KI-Reklamefilm für Instanttee.',
           's4.t5': 'KI-Teepflanzung', 's4.d5': 'Konzeptdarstellung einer KI-Teepflanzung.',
           's4.t6': 'Sommersonnenwende', 's4.d6': 'KI-Kurzfilm zum Sonnentermin „Sommersonnenwende“.',
           's5.title': 'Realaufnahmen',
@@ -1461,8 +1469,8 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
           's5.t1': 'Xiangfeng Auswahl · Finalfassung', 's5.d1': 'Produktdreh und Postproduktion der Xiangfeng-Auswahl.',
           's5.t2': 'Fuxiang Minglu', 's5.d2': 'Finaler Produktdreh für Fuxiang Minglu.',
           's5.t3': 'Du bist der Berg', 's5.d3': 'Marken-tematischer Realfilm.',
-          's5.t4': 'Mao Xiaowei · Douyin-Kurzfilm', 's5.d4': 'Realfilm für Douyin (MOV-Original).',
-          's5.t5': 'Licht & Schatten v5', 's5.d5': 'Finale Fassung mit Licht-Schatten-Tonalität.',
+          's5.t4': 'Kunde · Douyin-Kurzfilm', 's5.d4': 'Realfilm für Douyin (MOV-Original).',
+          's5.t5': 'Licht & Schatten · Markenfilm', 's5.d5': 'Finale Fassung mit Licht-Schatten-Tonalität.',
           's6.title': 'Webseiten',
           's6.lead': '2 Firmenwebsites, komplett neu gebaut und übergeben. Hier werden nur Links und Inhalte gezeigt; Klick öffnet die Live-Seite.',
           's6.s1t': 'Xiangfeng Tea Website', 's6.s1d': 'Firmenseite der Xiangfeng Tea Group; Aufbau, Befüllung und Wartung in Eigenregie.',
@@ -1490,14 +1498,14 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
           'nav.brand': '劉楚江 <span>· ポートフォリオ</span>',
           'hero.eyebrow': '求職ポートフォリオ · 2026',
           'hero.h1': '撮影 · AI動画生成<br>編集 · <em>サイト制作</em>',
-          'hero.summary': 'こんにちは、<strong>劉楚江</strong>です。コンテンツ制作経験5年。<strong>オンラインの動画生成・編集の仕事</strong>（正社員・兼業・リモートいずれも可）を探しています。撮影からAI生成、編集、サイト公開まで一貫して完結できます。',
+          'hero.summary': 'こんにちは、<strong>劉楚江</strong>です。コンテンツ制作経験3.5+年。<strong>オンラインの動画生成・編集の仕事</strong>（正社員・兼業・リモートいずれも可）を探しています。撮影からAI生成、編集、サイト公開まで一貫して完結できます。',
           'hero.meta1': '<strong>劉楚江</strong> · 男性 · 24歳',
-          'hero.meta2': '経験5年', 'hero.meta3': '即日可能', 'hero.meta4': 'リモート · 希望都市：蘭州',
+          'hero.meta2': '経験3.5+年', 'hero.meta3': '即日可能', 'hero.meta4': 'リモート · Remote-first',
           'hero.cta1': '作品を見る ↓', 'hero.cta2': '連絡先',
-          'stats.n1': '5年', 'stats.l1': 'メディアコンテンツ制作経験',
+          'stats.n1': '3.5+年', 'stats.l1': 'メディアコンテンツ制作経験',
           'stats.n2': '10+', 'stats.l2': '本のAIプロモ動画',
           'stats.n3': '6セット', 'stats.l3': 'オリジナルキャラクターアセット',
-          'stats.n4': '2件', 'stats.l4': 'ゼロから構築した企業外販サイト',
+          'stats.n4': '2件', 'stats.l4': 'ゼロから構築した企業外販サイト', 'stats.n5': '45K', 'stats.l5': 'サイト月間訪問数',
           's1.title': '求職意向',
           's1.summary': 'オンラインの動画生成・編集の仕事を探しています。AI動画生成、実写動画の編集、関連サイトの制作に対応。リモート納品、単発・長期どちらも可。',
           's1.p1': '現在、湘豊茶業集団でAI動画・ビジュアルコンテンツを担当。AIプロモ動画10本以上、オリジナルキャラクターアセット6セットを制作し、企業外販サイト2件と社内素材ライブラリをゼロから構築。実写商品動画を数十本編集し、天猫・淘宝・京東・動画号などのプラットフォームに配信。',
@@ -1510,7 +1518,7 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
           's2.c2n': '02 / 生成', 's2.c2t': 'AI動画生成', 's2.c2d': '漫剧制作に参加。镜头分解と脚本執筆が可能で、キャラ設定・アセット構築・AI生成・完成納品まで一貫対応。',
           's2.c3n': '03 / 編集', 's2.c3t': '動画編集', 's2.c3d': 'リズム、字幕、サウンド、カラーグレーディング。天猫・抖音・動画号など主要プラットフォーム向けに仕上げます。',
           's2.c4n': '04 / サイト', 's2.c4t': 'サイト制作', 's2.c4d': '企業外販サイトを0から2件納品し、地域を超えて使える社内オンライン素材ライブラリも構築。',
-          's3.title': '職歴', 's3.lead': 'ニューメディア・コンテンツ制作の経験5年。撮影実務、AIコンテンツ制作、チーム管理、事業立ち上げをカバー。',
+          's3.title': '職歴', 's3.lead': 'ニューメディア・コンテンツ制作の経験3.5+年。撮影実務、AIコンテンツ制作、チーム管理、事業立ち上げをカバー。',
           's3.e1t': '2026.03 – 現在', 's3.e1h': '湘豊茶業集団有限公司 · 撮影 / AI動画制作',
           's3.e1p': '会社のAI製品動画業務を担当し、キャラ設定・アセット構築から完成納品までを統括。オリジナルキャラ6セット、AIプロモ動画10本以上を制作。企業外販サイト2件と社内素材ライブラリをゼロから構築。実写撮影と後期も統括し、天猫・淘宝・京東・動画号などへ配信。',
           's3.e2t': '2024.04 – 2026.02', 's3.e2h': '長沙11豆文化観光有限公司 · 店舗店長',
@@ -1525,8 +1533,8 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
           's4.lead': 'AI生成ショート、コンセプト映像、クリエイティブ動画の6スロット。すべてオンラインでホストされ、クリックで再生。再生できない場合は自動でバックアップ映像に切り替わります。',
           's4.t1': '小満 · 最終版', 's4.d1': '節気「小満」テーマのAI短編。',
           's4.t2': '世界環境デー 2', 's4.d2': '世界環境デーをテーマにしたAI短編。',
-          's4.t3': 'AI短編 · 9月15日', 's4.d3': 'AI生成短編 · 9月版（MOV原版）。',
-          's4.t4': '速溶茶 · 改訂版2', 's4.d4': '速溶茶のシーン別AI紹介動画。',
+          's4.t3': 'AI短編 · 9月', 's4.d3': 'AI生成短編 · 9月（MOV原版）。',
+          's4.t4': '速溶茶プロモ', 's4.d4': '速溶茶のシーン別AI紹介動画。',
           's4.t5': 'AI茶園', 's4.d5': 'AI茶園シーンのコンセプト映像。',
           's4.t6': '夏至', 's4.d6': '節気「夏至」テーマのAI短編。',
           's5.title': '実写作品',
@@ -1534,8 +1542,8 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
           's5.t1': '湘豊選抜 · 完成版', 's5.d1': '湘豊選抜の商品実写と後期仕上げ。',
           's5.t2': '福湘茗露', 's5.d2': '福湘茗露の商品実写完成作。',
           's5.t3': 'あなたは山', 's5.d3': 'ブランドテーマの実写短編。',
-          's5.t4': '毛暁薇 · 抖音短編', 's5.d4': '抖音向け実写短編（MOV原版）。',
-          's5.t5': '光影バージョン5', 's5.d5': '光と影のトーン仕上げ版。',
+          's5.t4': 'クライアント · 抖音短編', 's5.d4': '抖音向け実写短編（MOV原版）。',
+          's5.t5': '光と影・ブランド映像', 's5.d5': '光と影のトーン仕上げ版。',
           's6.title': '制作サイト',
           's6.lead': 'ゼロから構築・納品した企業サイト2件。ここではリンクとサイト内容のみ表示し、クリックで実サイトを開きます。',
           's6.s1t': '湘豊茶業公式サイト', 's6.s1d': '湘豊茶業集団の公式サイト。構築・公開・保守を一人で完結。',
@@ -1563,14 +1571,14 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
           'nav.brand': 'Лю Чуцзян <span>· Портфолио</span>',
           'hero.eyebrow': 'Портфолио · 2026',
           'hero.h1': 'Фото · AI-видео<br>Монтаж · <em>Сайты</em>',
-          'hero.summary': 'Привет, я <strong>Лю Чуцзян</strong>, у меня 5 лет опыта в контент-производстве. Ищу <strong>удалённую работу по генерации и монтажу видео</strong> (полная/частичная занятость или фриланс), могу вести весь путь от съёмки и AI-генерации до монтажа и сайта.',
+          'hero.summary': 'Привет, я <strong>Лю Чуцзян</strong>, у меня 3.5+ лет опыта в контент-производстве. Ищу <strong>удалённую работу по генерации и монтажу видео</strong> (полная/частичная занятость или фриланс), могу вести весь путь от съёмки и AI-генерации до монтажа и сайта.',
           'hero.meta1': '<strong>Лю Чуцзян</strong> · Мужчина · 24 года',
-          'hero.meta2': '5 лет опыта', 'hero.meta3': 'Свободен сразу', 'hero.meta4': 'Удалённо · Желаемый город: Ланьчжоу',
+          'hero.meta2': '3.5+ лет опыта', 'hero.meta3': 'Свободен сразу', 'hero.meta4': 'Удалённо · Remote-first',
           'hero.cta1': 'Смотреть работы ↓', 'hero.cta2': 'Контакты',
-          'stats.n1': '5 лет', 'stats.l1': 'в медиапроизводстве',
+          'stats.n1': '3.5+ лет', 'stats.l1': 'в медиапроизводстве',
           'stats.n2': '10+', 'stats.l2': 'AI-промо-видео создано',
           'stats.n3': '6 наборов', 'stats.l3': 'оригинальных персонажей',
-          'stats.n4': '2', 'stats.l4': 'корпоративных сайта с нуля',
+          'stats.n4': '2', 'stats.l4': 'корпоративных сайта с нуля', 'stats.n5': '45K', 'stats.l5': 'среднемесячных визитов',
           's1.title': 'Цель трудоустройства',
           's1.summary': 'Ищу удалённую работу по генерации и монтажу видео: AI-видео, монтаж реальных съёмок и связанные сайты; удалённая сдача, проектно или на долгий срок.',
           's1.p1': 'Сейчас работаю в группе Xiangfeng Tea, отвечаю за AI-видео и визуальный контент: создано более 10 промо-видео и 6 наборов оригинальных персонажей, 2 торговых сайта и корпоративная медиатека построены с нуля, а также десятки отснятых и смонтированных видео для Tmall, Taobao, JD, WeChat Channels и др.',
@@ -1583,7 +1591,7 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
           's2.c2n': '02 / ГЕНЕРАЦИЯ', 's2.c2t': 'Генерация AI-видео', 's2.c2d': 'Участие в производстве маньчжурских драм, раскадровка и сценарии: от дизайна персонажей и ассетов до AI-генерации и сдачи готового видео.',
           's2.c3n': '03 / МОНТАЖ', 's2.c3t': 'Монтаж видео', 's2.c3d': 'Ритм, субтитры, звук и цветокоррекция; финалы под Tmall, Douyin, WeChat Channels и другие платформы.',
           's2.c4n': '04 / САЙТЫ', 's2.c4t': 'Создание сайтов', 's2.c4d': '2 торговых сайта сделаны с нуля, плюс корпоративная онлайн-медиатека для распределённых команд.',
-          's3.title': 'Опыт работы', 's3.lead': '5 лет в новых медиа и контент-производстве: съёмка, AI-контент, управление командой и запуск проектов.',
+          's3.title': 'Опыт работы', 's3.lead': '3.5+ лет в новых медиа и контент-производстве: съёмка, AI-контент, управление командой и запуск проектов.',
           's3.e1t': '2026.03 – н. в.', 's3.e1h': 'Группа Xiangfeng Tea Co., Ltd. · Съёмка / AI-видео',
           's3.e1p': 'Отвечал за AI-видео бизнес компании: от дизайна персонажей и ассетов до сдачи; создано 6 оригинальных наборов персонажей и более 10 промо-видео; 2 торговых сайта и медиатека построены с нуля; постановка съёмки и постпродакшн, дистрибуция на Tmall, Taobao, JD, WeChat Channels и др.',
           's3.e2t': '2024.04 – 2026.02', 's3.e2h': 'Changsha 11dou Culture & Tourism Co., Ltd. · Управляющий магазином',
@@ -1598,8 +1606,8 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
           's4.lead': 'AI-короткометражки, концептуальные и креативные видео — 6 слотов. Видео размещены онлайн и запускаются по клику; при сбое автоматически подставляется резервный источник.',
           's4.t1': 'Сяомань · Финал', 's4.d1': 'AI-короткий фильм на тему солнечного термина «Сяомань».',
           's4.t2': 'Всемирный день окружающей среды 2', 's4.d2': 'AI-фильм ко Всемирному дню окружающей среды.',
-          's4.t3': 'AI-короткий фильм · 15 сент.', 's4.d3': 'AI-фильм · версия сентября (оригинал в MOV).',
-          's4.t4': 'Растворимый чай · ред. 2', 's4.d4': 'Сюжетный AI-рекламный ролик для растворимого чая.',
+          's4.t3': 'AI-короткий фильм · Сентябрь', 's4.d3': 'AI-фильм · версия сентября (оригинал в MOV).',
+          's4.t4': 'Растворимый чай · Промо', 's4.d4': 'Сюжетный AI-рекламный ролик для растворимого чая.',
           's4.t5': 'AI-чайный сад', 's4.d5': 'Концептуальная визуализация AI-чайного сада.',
           's4.t6': 'Летнее солнцестояние', 's4.d6': 'AI-короткий фильм на тему летнего солнцестояния.',
           's5.title': 'Реальные видео',
@@ -1607,8 +1615,8 @@ i18n: 中 / English / Français / Deutsch / 日本語 / Русский 六语言
           's5.t1': 'Отбор Xiangfeng · Финал', 's5.d1': 'Съёмка и постпродакшн продукта «Отбор Xiangfeng».',
           's5.t2': 'Фусян Минлу', 's5.d2': 'Финальная съёмка продукта Fuxiang Minglu.',
           's5.t3': 'Ты — гора', 's5.d3': 'Тематический реальный ролик бренда.',
-          's5.t4': 'Мао Сяовэй · ролик для Douyin', 's5.d4': 'Реальный ролик для Douyin (оригинал MOV).',
-          's5.t5': 'Свет и тень, версия 5', 's5.d5': 'Финальная версия в тонах света и тени.',
+          's5.t4': 'Клиент · ролик для Douyin', 's5.d4': 'Реальный ролик для Douyin (оригинал MOV).',
+          's5.t5': 'Свет и тень · Бренд-ролик', 's5.d5': 'Финальная версия в тонах света и тени.',
           's6.title': 'Веб-сайты',
           's6.lead': '2 корпоративных сайта, созданные и сданные с нуля. Здесь показаны только ссылки и содержимое; клик открывает живой сайт.',
           's6.s1t': 'Официальный сайт Xiangfeng Tea', 's6.s1d': 'Корпоративный сайт группы Xiangfeng Tea; сборка, наполнение и обслуживание самостоятельно.',
