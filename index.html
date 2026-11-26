@@ -52,13 +52,13 @@
       transition: background 0.3s ease;
     }
     .nav, article.page, footer { position: relative; z-index: 1; }
-    .work-card, .skill-card, .cap-card, .brief-card, .contact-card, .stat, .timeline-item, .callout {
+    .work-card, .skill-card, .cap-card, .contact-card, .stat, .timeline-item, .callout {
       opacity: 0; transform: translateY(28px);
       transition: opacity 0.9s ease-out, transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
       will-change: opacity, transform;
     }
     .work-card.is-visible, .skill-card.is-visible, .cap-card.is-visible,
-    .brief-card.is-visible, .contact-card.is-visible, .stat.is-visible,
+    .contact-card.is-visible, .stat.is-visible,
     .timeline-item.is-visible, .callout.is-visible { opacity: 1; transform: translateY(0); }
     .section-head, .section-lead {
       opacity: 0; transform: translateY(16px);
@@ -71,7 +71,7 @@
     }
     @media (prefers-reduced-motion: reduce) {
       #cursor-spotlight { display: none; }
-      .work-card, .skill-card, .cap-card, .brief-card, .contact-card, .stat,
+      .work-card, .skill-card, .cap-card, .contact-card, .stat,
       .timeline-item, .callout, .section-head, .section-lead {
         opacity: 1 !important; transform: none !important; transition: none !important;
       }
@@ -200,15 +200,6 @@
     .timeline-item ul li { font-size: 0.875rem; color: var(--ink-2); padding-left: 14px; position: relative; margin-bottom: 4px; }
     .timeline-item ul li::before { content: '—'; position: absolute; left: 0; color: var(--accent); }
 
-    /* === CLIENT BRIEF === */
-    .brief-card { background: linear-gradient(165deg, var(--bg2) 0%, var(--bg3) 100%); border: 1px solid var(--rule); border-radius: var(--radius-lg); padding: clamp(1.25rem, 2.5vw, 2rem); border-left: 3px solid var(--accent); }
-    .brief-badge { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.14rem; text-transform: uppercase; color: var(--accent); background: var(--bg); border: 1px solid var(--rule); border-radius: var(--radius-pill); padding: 4px 12px; margin-bottom: 12px; }
-    .brief-card h3 { margin-bottom: 4px; font-size: 1.125rem; }
-    .brief-card .brief-meta { font-size: 0.875rem; color: var(--ink-muted); margin-bottom: 12px; }
-    .brief-card ul { list-style: none; padding: 0; }
-    .brief-card ul li { font-size: 0.875rem; color: var(--ink-2); padding-left: 16px; position: relative; margin-bottom: 4px; }
-    .brief-card ul li::before { content: '—'; position: absolute; left: 0; color: var(--accent); }
-
     /* === VIDEO GRID === */
     .work-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
     .work-card { display: flex; flex-direction: column; background: var(--bg2); border: 1px solid var(--rule); border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 12px 32px -18px var(--shadow-card); transition: border-color 0.25s ease, transform 0.25s ease; }
@@ -250,7 +241,6 @@
       <li><a href="#workstation"><span class="en-text">ComfyUI</span><span class="zh-text">AI工作站</span></a></li>
       <li><a href="#skills"><span class="en-text">Skills</span><span class="zh-text">技能</span></a></li>
       <li><a href="#experience"><span class="en-text">Experience</span><span class="zh-text">工作经历</span></a></li>
-      <li><a href="#brief"><span class="en-text">Client Brief</span><span class="zh-text">海外客户简报</span></a></li>
       <li><a href="#works"><span class="en-text">AI Works</span><span class="zh-text">AI作品</span></a></li>
     </ul>
     <div class="nav__right">
@@ -458,34 +448,10 @@
         </ul>
       </section>
 
-      <!-- 05 CLIENT TEST BRIEF -->
-      <section id="brief">
-        <div class="section-head">
-          <span class="section-head__num">05</span>
-          <h2><span class="en-text">International Client Test Brief</span><span class="zh-text">海外客户测试简报</span></h2>
-        </div>
-        <p class="section-lead">
-          <span class="en-text">Pro bono test deliverable completed for a Paris-based agency — demonstrates I can work with European creative direction and deliver to a French brand.</span>
-          <span class="zh-text">为巴黎一家创意机构完成的免费测试简报——证明我能理解欧洲创意方向、交付符合法国品牌调性的作品。</span>
-        </p>
-        <div class="brief-card">
-          <span class="brief-badge"><span class="en-text">PARIS · FRANCE</span><span class="zh-text">巴黎 · 法国</span></span>
-          <h3>Thomas Valingot Agency</h3>
-          <div class="brief-meta"><span class="en-text">Oct 2026 · Freelance test brief · 5 deliverables</span><span class="zh-text">2026年10月 · 自由职业测试简报 · 5 项交付物</span></div>
-          <ul>
-            <li><span class="en-text">15-second vertical AI product ad (French jewelry concept, no logo)</span><span class="zh-text">15秒竖版 AI 产品广告（法国珠宝概念，无logo）</span></li>
-            <li><span class="en-text">4 static creative assets (AI-generated, product-focused)</span><span class="zh-text">4 张静态创意资产（AI 生成，产品导向）</span></li>
-            <li><span class="en-text">Cover letter addressed to the creative director</span><span class="zh-text">写给创意总监的 Cover Letter</span></li>
-            <li><span class="en-text">Process log documenting workflow and toolchain decisions</span><span class="zh-text">流程日志，记录工作流和工具链决策</span></li>
-            <li><span class="en-text">Delivered on deadline via Google Drive (available on request)</span><span class="zh-text">按期通过 Google Drive 交付（可按需展示）</span></li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- 06 AI VIDEO WORKS -->
+      <!-- 05 AI VIDEO WORKS -->
       <section id="works">
         <div class="section-head">
-          <span class="section-head__num">06</span>
+          <span class="section-head__num">05</span>
           <h2><span class="en-text">AI Video Works</span><span class="zh-text">AI 视频作品</span></h2>
         </div>
         <p class="section-lead">
@@ -545,10 +511,10 @@
         </div>
       </section>
 
-      <!-- 07 CONTACT -->
+      <!-- 06 CONTACT -->
       <section id="contact">
         <div class="section-head">
-          <span class="section-head__num">07</span>
+          <span class="section-head__num">06</span>
           <h2><span class="en-text">Contact</span><span class="zh-text">联系方式</span></h2>
         </div>
         <p class="section-lead">
@@ -623,7 +589,7 @@
         if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); }
       });
     }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-    document.querySelectorAll('.work-card, .skill-card, .cap-card, .brief-card, .contact-card, .stat, .timeline-item, .callout, .section-head, .section-lead').forEach(function(el) {
+    document.querySelectorAll('.work-card, .skill-card, .cap-card, .contact-card, .stat, .timeline-item, .callout, .section-head, .section-lead').forEach(function(el) {
       observer.observe(el);
     });
 
