@@ -28,7 +28,6 @@
       font-family: var(--font-sans); color: var(--ink); background: var(--bg);
       font-size: 0.9375rem; line-height: 1.75; -webkit-font-smoothing: antialiased;
     }
-    /* === BILINGUAL CONTROL === */
     .zh-text { display: none; }
     body.lang-zh .zh-text { display: inline; }
     body.lang-zh .en-text { display: none; }
@@ -36,9 +35,6 @@
     body.lang-en .zh-block { display: none; }
     body.lang-zh .en-block { display: none; }
     body.lang-en .en-block { display: block; }
-    /* Make block elements toggle properly */
-    body.lang-zh [lang-zh] { display: initial; }
-    body.lang-en [lang-en] { display: initial; }
 
     body::after {
       content: ''; position: fixed; inset: 0; z-index: 999; pointer-events: none;
@@ -65,10 +61,6 @@
       transition: opacity 0.7s ease-out, transform 0.7s ease-out;
     }
     .section-head.is-visible, .section-lead.is-visible { opacity: 1; transform: translateY(0); }
-    @keyframes gold-sweep {
-      0%, 100% { transform: translateX(-100%); opacity: 0.5; }
-      50% { transform: translateX(100%); opacity: 1; }
-    }
     @media (prefers-reduced-motion: reduce) {
       #cursor-spotlight { display: none; }
       .work-card, .skill-card, .cap-card, .contact-card, .stat,
@@ -77,7 +69,6 @@
       }
     }
 
-    /* === NAV === */
     .nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 60px;
       display: flex; align-items: center; justify-content: space-between; gap: 16px;
@@ -106,7 +97,6 @@
     }
     .nav__cta:hover { background: var(--accent-hover); }
 
-    /* === HERO === */
     .hero {
       position: relative; isolation: isolate; overflow: hidden; width: 100%;
       min-height: clamp(34rem, 92svh, 60rem); background: var(--bg);
@@ -138,7 +128,6 @@
     .btn--ghost { border: 1px solid var(--rule); color: var(--ink); background: transparent; }
     .btn--ghost:hover { border-color: var(--accent); color: var(--accent); }
 
-    /* === MAIN === */
     main { width: calc(100% - 2rem); max-width: var(--max); margin: 0 auto; padding-block: 3rem; }
     main > section { margin-bottom: 4rem; }
     main > section:last-child { margin-bottom: 0; }
@@ -152,19 +141,11 @@
     a { color: var(--accent); text-decoration: none; }
     a:hover { color: var(--accent-hover); }
     strong { font-weight: 650; }
-    code { font-family: var(--font-mono); }
 
-    /* === STATS === */
     .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; border-block: 1px solid var(--rule); padding-block: 20px; margin-bottom: 3rem; }
     .stat__num { font-size: clamp(1.5rem, 3vw, 2.125rem); font-weight: 750; line-height: 1.2; color: var(--accent); font-variant-numeric: tabular-nums; }
     .stat__label { font-size: 0.8125rem; color: var(--ink-muted); margin-top: 4px; }
 
-    /* === CALLOUT === */
-    .callout { margin-top: 1.5rem; padding: 1.5rem; background: var(--accent-soft); border: 1px solid var(--rule); border-left: 3px solid var(--accent); border-radius: var(--radius-md); }
-    .callout__label { display: block; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12rem; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
-    .callout p { color: var(--ink-2); max-width: none; }
-
-    /* === COMFYUI WORKSTATION === */
     .ws-hero { background: linear-gradient(165deg, var(--bg2) 0%, var(--bg3) 100%); border: 1px solid var(--rule); border-radius: var(--radius-lg); padding: clamp(1.5rem, 3vw, 2.5rem); margin-bottom: 1.5rem; position: relative; overflow: hidden; }
     .ws-hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--accent), var(--accent2), var(--accent)); }
     .ws-badge { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.14rem; text-transform: uppercase; color: var(--accent); background: var(--bg); border: 1px solid var(--accent); border-radius: var(--radius-pill); padding: 4px 12px; margin-bottom: 12px; }
@@ -180,7 +161,6 @@
     .cap-card p { font-size: 0.875rem; color: var(--ink-muted); max-width: none; }
     .cap-card .metric { display: inline-block; margin-top: 8px; font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent); background: var(--bg); border: 1px solid var(--accent-active); border-radius: var(--radius-sm); padding: 2px 8px; }
 
-    /* === SKILLS === */
     .skill-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
     .skill-card { background: var(--bg2); border: 1px solid var(--rule); border-radius: var(--radius-lg); padding: 20px; transition: border-color 0.25s ease, transform 0.25s ease; }
     .skill-card:hover { border-color: var(--accent); transform: translateY(-3px); }
@@ -188,7 +168,6 @@
     .skill-card h3 { margin-bottom: 8px; }
     .skill-card p { font-size: 0.875rem; color: var(--ink-muted); max-width: none; }
 
-    /* === TIMELINE === */
     .timeline { list-style: none; border-left: 1px solid var(--rule); margin-left: 4px; }
     .timeline-item { position: relative; padding: 0 0 20px 20px; }
     .timeline-item:last-child { padding-bottom: 0; }
@@ -200,7 +179,6 @@
     .timeline-item ul li { font-size: 0.875rem; color: var(--ink-2); padding-left: 14px; position: relative; margin-bottom: 4px; }
     .timeline-item ul li::before { content: '—'; position: absolute; left: 0; color: var(--accent); }
 
-    /* === VIDEO GRID === */
     .work-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
     .work-card { display: flex; flex-direction: column; background: var(--bg2); border: 1px solid var(--rule); border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 12px 32px -18px var(--shadow-card); transition: border-color 0.25s ease, transform 0.25s ease; }
     .work-card:hover { border-color: var(--accent); transform: translateY(-3px); }
@@ -209,10 +187,7 @@
     .work-card figcaption { display: flex; flex-direction: column; gap: 4px; padding: 16px 20px 20px; }
     .work-card__tag { font-family: var(--font-mono); font-size: 0.6875rem; letter-spacing: 0.14rem; text-transform: uppercase; color: var(--accent); }
     .work-card figcaption p { font-size: 0.8125rem; color: var(--ink-muted); max-width: none; }
-    .work-card__more { align-self: flex-start; margin-top: 8px; display: inline-flex; align-items: center; gap: 8px; font-size: 0.8125rem; font-weight: 600; color: var(--accent); border: 1px solid var(--accent); border-radius: var(--radius-pill); padding: 7px 16px; transition: background 0.2s ease, color 0.2s ease; }
-    .work-card__more:hover { background: var(--accent); color: var(--bg); }
 
-    /* === CONTACT === */
     .contact-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 20px; }
     .contact-card { background: var(--bg2); border: 1px solid var(--rule); border-radius: var(--radius-lg); padding: 20px; }
     .contact-card dt { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.12rem; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 8px; }
@@ -221,10 +196,8 @@
     .contact-card dd { font-size: 0.875rem; color: var(--ink-2); }
     .contact-card dd + dd { margin-top: 6px; }
 
-    /* === FOOTER === */
     footer { border-top: 1px solid var(--rule); padding-top: 20px; font-size: 0.8125rem; color: var(--ink-muted); }
 
-    /* === RESPONSIVE === */
     @media (max-width: 960px) { .skill-grid { grid-template-columns: repeat(2, 1fr); } .cap-grid { grid-template-columns: 1fr; } .nav__links { display: none; } }
     @media (max-width: 768px) { main { padding-block: 2rem; } main > section { margin-bottom: 3rem; } .work-grid, .contact-grid { grid-template-columns: 1fr; } .stats { grid-template-columns: repeat(2, 1fr); gap: 20px; } .hero-meta { flex-direction: column; align-items: flex-start; } }
     @media (max-width: 560px) { .skill-grid { grid-template-columns: 1fr; } .hero-actions .btn { width: 100%; justify-content: center; } .nav__cta { display: none; } }
@@ -237,11 +210,11 @@
   <nav class="nav" id="nav" aria-label="Main navigation">
     <a class="nav__brand" href="#top">Chujiang Liu <span>· Portfolio</span></a>
     <ul class="nav__links">
-      <li><a href="#objective"><span class="en-text">Objective</span><span class="zh-text">求职方向</span></a></li>
-      <li><a href="#workstation"><span class="en-text">ComfyUI</span><span class="zh-text">AI工作站</span></a></li>
-      <li><a href="#skills"><span class="en-text">Skills</span><span class="zh-text">技能</span></a></li>
-      <li><a href="#experience"><span class="en-text">Experience</span><span class="zh-text">工作经历</span></a></li>
       <li><a href="#works"><span class="en-text">AI Works</span><span class="zh-text">AI作品</span></a></li>
+      <li><a href="#websites"><span class="en-text">Websites</span><span class="zh-text">网站搭建</span></a></li>
+      <li><a href="#experience"><span class="en-text">Experience</span><span class="zh-text">工作经历</span></a></li>
+      <li><a href="#skills"><span class="en-text">Skills</span><span class="zh-text">技能</span></a></li>
+      <li><a href="#contact"><span class="en-text">Contact</span><span class="zh-text">联系我</span></a></li>
     </ul>
     <div class="nav__right">
       <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language">中 / EN</button>
@@ -279,9 +252,9 @@
           <li><span class="en-text">Immediate start</span><span class="zh-text">随时可上岗</span></li>
         </ul>
         <div class="hero-actions">
-          <a class="btn btn--primary" href="#works"><span class="en-text">View AI Works ↓</span><span class="zh-text">查看AI作品 ↓</span></a>
-          <a class="btn btn--ghost" href="#workstation"><span class="en-text">See ComfyUI Rig</span><span class="zh-text">查看AI工作站</span></a>
-          <a class="btn btn--ghost" href="#contact"><span class="en-text">Contact</span><span class="zh-text">联系我</span></a>
+          <a class="btn btn--primary" href="#works"><span class="en-text">View AI Video Works ↓</span><span class="zh-text">查看AI视频作品 ↓</span></a>
+          <a class="btn btn--ghost" href="#websites"><span class="en-text">See My Websites</span><span class="zh-text">看看我搭的网站</span></a>
+          <a class="btn btn--ghost" href="#contact"><span class="en-text">Contact ↗</span><span class="zh-text">联系我 ↗</span></a>
         </div>
       </div>
     </header>
@@ -291,183 +264,20 @@
       <div class="stats">
         <div class="stat"><div class="stat__num">3.5+</div><div class="stat__label"><span class="en-text">years content production</span><span class="zh-text">年内容制作经验</span></div></div>
         <div class="stat"><div class="stat__num">12+</div><div class="stat__label"><span class="en-text">AI promo videos end-to-end</span><span class="zh-text">AI宣传片全链路交付</span></div></div>
-        <div class="stat"><div class="stat__num">6</div><div class="stat__label"><span class="en-text">character asset sets (PuLID-locked)</span><span class="zh-text">角色资产套装（PuLID一致性锁定）</span></div></div>
+        <div class="stat"><div class="stat__num">2</div><div class="stat__label"><span class="en-text">self-built production websites</span><span class="zh-text">自主搭建生产级网站</span></div></div>
+        <div class="stat"><div class="stat__num">3–4h</div><div class="stat__label"><span class="en-text">CET timezone overlap</span><span class="zh-text">CET 时区重叠</span></div></div>
         <div class="stat"><div class="stat__num">14</div><div class="stat__label"><span class="en-text">ComfyUI one-click workflows</span><span class="zh-text">ComfyUI 一键工作流</span></div></div>
-        <div class="stat"><div class="stat__num">14B</div><div class="stat__label"><span class="en-text">Wan2.2 I2V dual-model pipeline</span><span class="zh-text">Wan2.2 I2V 双模型管线</span></div></div>
       </div>
 
-      <!-- 01 OBJECTIVE -->
-      <section id="objective">
-        <div class="section-head">
-          <span class="section-head__num">01</span>
-          <h2><span class="en-text">What I Deliver</span><span class="zh-text">交付能力</span></h2>
-        </div>
-        <p class="section-lead">
-          <span class="en-text">End-to-end AI video production for product brands — concept, AI generation, character consistency locking, and professional editing. Freelance or monthly retainer, remote.</span>
-          <span class="zh-text">为产品品牌提供端到端 AI 视频制作：创意、AI 生成、角色一致性锁定、专业剪辑。远程自由接单或月度合作均可。</span>
-        </p>
-        <p>
-          <span class="en-text">I own the full pipeline: creative direction → AI asset generation → video synthesis → post-production → platform-native delivery. My local ComfyUI workstation eliminates cloud API costs and gives me full control over model fine-tuning, character consistency (PuLID-Flux), and video resolution (480p → 1080p Super-Resolution).</span>
-          <span class="zh-text">独立掌控全链路：创意指导 → AI 资产生成 → 视频合成 → 后期制作 → 平台原生交付。本地 ComfyUI 工作站免除云端 API 成本，可自主控制模型微调、角色一致性（PuLID-Flux）和视频分辨率（480p → 1080p 超分）。</span>
-        </p>
-        <p>
-          <span class="en-text">Previous work includes 12+ AI product promo videos for FMCG clients, 6 consistency-locked character asset sets, and content distributed across TikTok, YouTube, WeChat Channels, Tmall, and JD.</span>
-          <span class="zh-text">过往作品包括 12+ 条快消品 AI 产品宣传片、6 套角色一致性锁定资产集，内容分发至 TikTok、YouTube、视频号、天猫和京东。</span>
-        </p>
-        <div class="callout">
-          <span class="callout__label"><span class="en-text">Open for</span><span class="zh-text">合作方式</span></span>
-          <p>
-            <span class="en-text">Freelance per-project, monthly retainer, or test-brief based collaboration. Non-exclusive contracts accepted. Written English communication fluent. PayPal for international payments.</span>
-            <span class="zh-text">按项目自由接单、月度合作或测试简报形式合作均可。接受非排他合同。书面英文沟通流利，国际收款走 PayPal。</span>
-          </p>
-        </div>
-      </section>
-
-      <!-- 02 COMFYUI WORKSTATION -->
-      <section id="workstation">
-        <div class="section-head">
-          <span class="section-head__num">02</span>
-          <h2><span class="en-text">ComfyUI Local Workstation</span><span class="zh-text">ComfyUI 本地工作站</span></h2>
-        </div>
-        <p class="section-lead">
-          <span class="en-text">Self-hosted ComfyUI v3.2 deployment running a 14B video model on consumer GPU — 7 validated production capabilities with measured performance.</span>
-          <span class="zh-text">自托管 ComfyUI v3.2，消费级 GPU 上运行 14B 视频模型——7 大已验证生产能力，带实测性能数据。</span>
-        </p>
-        <div class="ws-hero">
-          <span class="ws-badge">● <span class="en-text">LIVE WORKSTATION</span><span class="zh-text">● 实机在跑</span></span>
-          <h3 style="font-size: 1.125rem; margin-bottom: 4px;"><span class="en-text">Hardware & Stack</span><span class="zh-text">硬件与软件栈</span></h3>
-          <div class="ws-specs">
-            <div class="ws-spec"><div class="ws-spec__k">GPU</div><div class="ws-spec__v">RTX 4070 Ti SUPER · 16GB VRAM</div></div>
-            <div class="ws-spec"><div class="ws-spec__k"><span class="en-text">CPU / RAM</span><span class="zh-text">CPU / 内存</span></div><div class="ws-spec__v">28-core · 64GB DDR5</div></div>
-            <div class="ws-spec"><div class="ws-spec__k"><span class="en-text">Storage</span><span class="zh-text">存储</span></div><div class="ws-spec__v">2TB NVMe · 80GB model weights</div></div>
-            <div class="ws-spec"><div class="ws-spec__k"><span class="en-text">Software</span><span class="zh-text">软件</span></div><div class="ws-spec__v">ComfyUI v3.2 · PyTorch 2.13 + CUDA 13</div></div>
-            <div class="ws-spec"><div class="ws-spec__k"><span class="en-text">Models</span><span class="zh-text">模型</span></div><div class="ws-spec__v">FLUX.1 Krea · FLUX Kontext · Wan2.2 I2V 14B</div></div>
-            <div class="ws-spec"><div class="ws-spec__k"><span class="en-text">Scale</span><span class="zh-text">规模</span></div><div class="ws-spec__v">13 custom nodes · 14 one-click workflows</div></div>
-          </div>
-          <p style="margin-top: 16px; font-size: 0.875rem; color: var(--ink-muted);">
-            <span class="en-text">Key engineering achievement: fp8 quantization + block-swap technique enables the 14B Wan2.2 video model to run on consumer 16GB VRAM — normally requiring a 24GB+ professional GPU.</span>
-            <span class="zh-text">核心技术亮点：fp8 量化 + block-swap 技术，让 14B 参数量的 Wan2.2 视频模型能在消费级 16GB 显存上跑通——通常需要 24GB 以上专业显卡。</span>
-          </p>
-        </div>
-        <h3 style="margin-bottom: 16px; color: var(--accent); font-family: var(--font-mono); letter-spacing: 0.1rem; font-size: 0.8125rem; text-transform: uppercase;">
-          <span class="en-text">Validated Production Capabilities</span><span class="zh-text">已验证的 7 大生产能力</span>
-        </h3>
-        <div class="cap-grid">
-          <div class="cap-card">
-            <span class="cap-card__num">CAP 01</span>
-            <h3>FLUX.1 Krea fp8 Photorealistic T2I</h3>
-            <p><span class="en-text">High-fidelity text-to-image generation with fine-grained control.</span><span class="zh-text">高保真文生图，支持细粒度控制。</span></p>
-            <span class="metric">~18.5s / shot</span>
-          </div>
-          <div class="cap-card">
-            <span class="cap-card__num">CAP 02</span>
-            <h3>FLUX Kontext</h3>
-            <p><span class="en-text">Semantic image editing via Chinese-language instructions — add, remove, re-contextualize.</span><span class="zh-text">中文指令驱动的语义图像编辑——增删改、换语境。</span></p>
-          </div>
-          <div class="cap-card">
-            <span class="cap-card__num">CAP 03</span>
-            <h3>PuLID-Flux Character Consistency</h3>
-            <p><span class="en-text">Lock a character's face and identity across multiple scenes and frames.</span><span class="zh-text">锁定角色的面部和身份，跨场景跨帧保持一致。</span></p>
-          </div>
-          <div class="cap-card">
-            <span class="cap-card__num">CAP 04</span>
-            <h3>FLUX.1-Fill Inpainting</h3>
-            <p><span class="en-text">Precise object removal, background replacement, and element extension.</span><span class="zh-text">精准去物、换背景、元素延展。</span></p>
-          </div>
-          <div class="cap-card">
-            <span class="cap-card__num">CAP 05</span>
-            <h3>SeedVR2 3B Pixel SR (4x)</h3>
-            <p><span class="en-text">Upscale low-res footage with detail-preserving pixel refinement.</span><span class="zh-text">低分辨率素材放大，保留细节的像素级重建。</span></p>
-          </div>
-          <div class="cap-card">
-            <span class="cap-card__num">CAP 06</span>
-            <h3>Wan2.2 I2V 14B Pipeline</h3>
-            <p><span class="en-text">Image-to-video with specialized flows for water, steam, ambient motion.</span><span class="zh-text">图生视频，水流、蒸汽、环境动态等专项流程。</span></p>
-          </div>
-          <div class="cap-card">
-            <span class="cap-card__num">CAP 07</span>
-            <h3>Video SR 480p → 1080p</h3>
-            <p><span class="en-text">Restore and upscale AI-generated video to broadcast quality.</span><span class="zh-text">AI 生成视频修复 + 放大至播出级画质。</span></p>
-            <span class="metric">177–297s / segment</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- 03 SKILLS -->
-      <section id="skills">
-        <div class="section-head">
-          <span class="section-head__num">03</span>
-          <h2><span class="en-text">Core Skills</span><span class="zh-text">核心技能</span></h2>
-        </div>
-        <div class="skill-grid">
-          <div class="skill-card">
-            <span class="skill-card__num">01 / GENERATE</span>
-            <h3><span class="en-text">AI Video Production</span><span class="zh-text">AI 视频生成</span></h3>
-            <p><span class="en-text">ComfyUI node workflows, Jimeng/Dreamina, PuLID-Flux character locking, Midjourney + LoRA, Wan2.2 I2V 14B image-to-video.</span><span class="zh-text">ComfyUI 节点工作流、即梦/可灵、PuLID-Flux 角色锁定、Midjourney + LoRA、Wan2.2 I2V 14B 图生视频。</span></p>
-          </div>
-          <div class="skill-card">
-            <span class="skill-card__num">02 / EDIT</span>
-            <h3><span class="en-text">Post-Production</span><span class="zh-text">后期剪辑</span></h3>
-            <p><span class="en-text">CapCut Pro (primary), pacing, subtitle packaging, sound design, color grading, platform-native delivery for TikTok / YouTube / Shorts.</span><span class="zh-text">CapCut Pro 主力、节奏把控、字幕包装、音效配乐、调色、TikTok/YouTube/Shorts 等平台原生交付。</span></p>
-          </div>
-          <div class="skill-card">
-            <span class="skill-card__num">03 / FLOW</span>
-            <h3><span class="en-text">Workflow & Collaboration</span><span class="zh-text">协作流程</span></h3>
-            <p><span class="en-text">Async-first, self-managed. Slack, Notion, Google Drive. Written English fluent. Timezone-adaptive for CET overlap.</span><span class="zh-text">异步优先、自我管理。Slack、Notion、Google Drive。书面英文流利，CET 时区自适应。</span></p>
-          </div>
-        </div>
-      </section>
-
-      <!-- 04 EXPERIENCE -->
-      <section id="experience">
-        <div class="section-head">
-          <span class="section-head__num">04</span>
-          <h2><span class="en-text">Experience</span><span class="zh-text">工作经历</span></h2>
-        </div>
-        <ul class="timeline">
-          <li class="timeline-item">
-            <span class="period">Mar 2026 – Present</span>
-            <h3><span class="en-text">AI Video Producer & Video Editor</span><span class="zh-text">AI视频制作人 & 剪辑师</span></h3>
-            <div class="role-company"><span class="en-text">Xiangfeng Tea Group · Changsha, China · Remote-friendly</span><span class="zh-text">湘丰茶业集团 · 长沙 · 远程支持</span></div>
-            <ul>
-              <li><span class="en-text">Owning full AI video production pipeline: concept → AI generation → editing → delivery</span><span class="zh-text">独立掌控 AI 视频全链路：创意 → AI 生成 → 剪辑 → 交付</span></li>
-              <li><span class="en-text">12+ AI product promo videos and 6 consistency-locked character asset sets in 6 months</span><span class="zh-text">6 个月内交付 12+ 条 AI 产品宣传片和 6 套角色一致性资产集</span></li>
-              <li><span class="en-text">Videos shipped to TikTok, YouTube, WeChat Channels, Tmall product pages</span><span class="zh-text">视频发布至 TikTok、YouTube、视频号、天猫产品页</span></li>
-              <li><span class="en-text">Built company-level media-asset library for 20+ regional teams</span><span class="zh-text">搭建公司级媒体素材库，服务 20+ 区域团队</span></li>
-            </ul>
-          </li>
-          <li class="timeline-item">
-            <span class="period">Apr 2024 – Feb 2025</span>
-            <h3><span class="en-text">AI Video Editor & Motion Designer</span><span class="zh-text">AI视频剪辑师 & 动态设计师</span></h3>
-            <div class="role-company"><span class="en-text">Hunan Xijian Smart Home (HOROW Switzerland) · Changsha, China</span><span class="zh-text">湖南希箭智能家居（HOROW 瑞士）· 长沙</span></div>
-            <ul>
-              <li><span class="en-text">AI-assisted video production for animated content and overseas social media (TikTok / YouTube Shorts)</span><span class="zh-text">AI 辅助动画内容和海外社媒（TikTok / YouTube Shorts）视频制作</span></li>
-              <li><span class="en-text">AI storyboard + motion design + editing for short-form marketing campaigns</span><span class="zh-text">AI 分镜 + 动态设计 + 剪辑，服务短形式营销活动</span></li>
-            </ul>
-          </li>
-          <li class="timeline-item">
-            <span class="period"><span class="en-text">Self-study · 2025–2026</span><span class="zh-text">自主学习 · 2025–2026</span></span>
-            <h3><span class="en-text">AI-assisted Website Building (Self-taught)</span><span class="zh-text">AI 辅助网站搭建（自学）</span></h3>
-            <div class="role-company"><span class="en-text">Side-project · HTML/CSS fundamentals + AI pair-programming (Cursor / Trae)</span><span class="zh-text">副业项目 · HTML/CSS 基础 + AI 结对编程（Cursor / Trae）</span></div>
-            <ul>
-              <li><span class="en-text">Self-learned HTML/CSS fundamentals from zero — built 2 production-grade websites for export businesses in Changsha, entirely through AI-assisted pair programming sessions</span><span class="zh-text">从零基础自学 HTML/CSS 基础，通过 AI 结对编程独立为长沙外贸企业搭建了 2 个生产级网站</span></li>
-              <li><span class="en-text">Delivered sites: aultras-tea.com (English-language corporate site for overseas buyers, catalog & inquiries) and xiangfengtea.com (corporate brand site)</span><span class="zh-text">交付案例：aultras-tea.com（面向海外买家的英文企业站，含产品目录和询盘入口）和 xiangfengtea.com（企业品牌官网）</span></li>
-              <li><span class="en-text">Deployed to GitHub Pages, handled domain DNS, SSL certificates, and cross-browser compatibility — full ownership from 0 to 1</span><span class="zh-text">独立完成 GitHub Pages 部署、域名 DNS 配置、SSL 证书和跨浏览器兼容性——从 0 到 1 全权负责</span></li>
-            </ul>
-          </li>
-        </ul>
-      </section>
-
-      <!-- 05 AI VIDEO WORKS -->
+      <!-- 01 AI VIDEO WORKS -->
       <section id="works">
         <div class="section-head">
-          <span class="section-head__num">05</span>
+          <span class="section-head__num">01</span>
           <h2><span class="en-text">AI Video Works</span><span class="zh-text">AI 视频作品</span></h2>
         </div>
         <p class="section-lead">
           <span class="en-text">Selected AI-generated product promo videos and creative shorts. Click any card to play.</span>
           <span class="zh-text">精选 AI 生成的产品宣传片和创意短片，点击卡片即可播放。</span>
-          <span style="color: var(--ink-muted); font-size: 0.8125rem;"><span class="en-text">Note: videos hosted on Chinese server — auto-fallback enabled if playback fails from Europe.</span><span class="zh-text">注：视频托管于国内服务器，欧洲访问失败会自动切备用源。</span></span>
         </p>
         <div class="work-grid">
           <figure class="work-card">
@@ -521,6 +331,172 @@
         </div>
       </section>
 
+      <!-- 02 SELF-BUILT WEBSITES -->
+      <section id="websites">
+        <div class="section-head">
+          <span class="section-head__num">02</span>
+          <h2><span class="en-text">Self-built Websites</span><span class="zh-text">自主搭建的网站</span></h2>
+        </div>
+        <p class="section-lead">
+          <span class="en-text">Self-taught HTML/CSS fundamentals + AI pair-programming. Built and deployed 2 production-grade corporate sites for export businesses in Changsha — from zero to live.</span>
+          <span class="zh-text">自学 HTML/CSS 基础 + AI 结对编程，为长沙外贸企业从 0 到 1 搭建并部署了 2 个生产级企业站。</span>
+        </p>
+        <div class="work-grid">
+          <figure class="work-card">
+            <div class="work-card__frame" style="background: linear-gradient(135deg, #2C5F3E 0%, #1a3d2a 100%); display: flex; align-items: center; justify-content: center;">
+              <div style="text-align: center; padding: 20px;">
+                <div style="font-size: 0.75rem; color: #C9A96E; font-family: var(--font-mono); letter-spacing: 0.15rem; margin-bottom: 12px;">G U I Z H O U &nbsp; A U L T R A S &nbsp; T E A</div>
+                <div style="font-size: 1.375rem; font-weight: 700; line-height: 1.3; color: #F5F0E6; font-family: Georgia, serif;">
+                  <span class="en-text">Premium Tea</span><span class="zh-text">优质茶叶</span><br>
+                  <span class="en-text">from China to the World</span><span class="zh-text">从中国到世界</span>
+                </div>
+                <div style="margin-top: 16px; display: flex; gap: 8px; justify-content: center;">
+                  <span style="font-size: 0.625rem; padding: 4px 10px; background: #C9A96E; color: #0F1714; border-radius: 3px; font-weight: 600;">Green Tea</span>
+                  <span style="font-size: 0.625rem; padding: 4px 10px; background: transparent; color: #CFC8BC; border: 1px solid #4a6b5a; border-radius: 3px;">Black Tea</span>
+                  <span style="font-size: 0.625rem; padding: 4px 10px; background: transparent; color: #CFC8BC; border: 1px solid #4a6b5a; border-radius: 3px;">Oolong</span>
+                </div>
+                <div style="margin-top: 14px; font-size: 0.6875rem; color: #8F8678; font-family: var(--font-mono);">aultras-tea.com</div>
+              </div>
+            </div>
+            <figcaption>
+              <span class="work-card__tag">CORPORATE SITE</span>
+              <h3>Aultras Tea — Premium Tea Export</h3>
+              <p><span class="en-text">English-language corporate site for EU/US buyers: product catalog, organic certifications, contact & inquiry forms.</span><span class="zh-text">面向欧美买家的英文企业站：产品目录、有机认证、询盘入口。</span></p>
+              <a href="https://aultras-tea.com" target="_blank" rel="noopener" style="display:inline-block; margin-top:6px; font-size:0.8125rem; color:var(--accent); text-decoration:none;">Visit site ↗</a>
+            </figcaption>
+          </figure>
+          <figure class="work-card">
+            <div class="work-card__frame" style="background: linear-gradient(135deg, #3D2B1F 0%, #1a1208 100%); display: flex; align-items: center; justify-content: center;">
+              <div style="text-align: center; padding: 20px;">
+                <div style="font-size: 0.75rem; color: #C9A96E; font-family: var(--font-mono); letter-spacing: 0.15rem; margin-bottom: 12px;">X I A N G F E N G &nbsp; T E A &nbsp; G R O U P</div>
+                <div style="font-size: 1.25rem; font-weight: 700; line-height: 1.4; color: #F5F0E6; font-family: Georgia, serif;">
+                  <span class="en-text">Hunan Xiangfeng Tea</span><span class="zh-text">湘丰茶业集团</span><br>
+                  <span style="color: #C9A96E; font-size: 0.875rem;">Since 1991 · Changsha, China</span>
+                </div>
+                <div style="margin-top: 16px; display: flex; gap: 6px; justify-content: center; flex-wrap: wrap;">
+                  <span style="font-size: 0.625rem; padding: 3px 8px; background: #C9A96E; color: #0F1714; border-radius: 3px; font-weight: 600;">Export</span>
+                  <span style="font-size: 0.625rem; padding: 3px 8px; background: #7E9B8E; color: #0F1714; border-radius: 3px; font-weight: 600;">Organic</span>
+                  <span style="font-size: 0.625rem; padding: 3px 8px; background: #4a3a28; color: #CFC8BC; border-radius: 3px;">ISO 22000</span>
+                  <span style="font-size: 0.625rem; padding: 3px 8px; background: #4a3a28; color: #CFC8BC; border-radius: 3px;">FSSC 22000</span>
+                </div>
+                <div style="margin-top: 14px; font-size: 0.6875rem; color: #8F8678; font-family: var(--font-mono);">xiangfengtea.com</div>
+              </div>
+            </div>
+            <figcaption>
+              <span class="work-card__tag">BRAND SITE</span>
+              <h3>Xiangfeng Tea Group</h3>
+              <p><span class="en-text">Full corporate brand site: company story, hot products, news center, exhibition calendar.</span><span class="zh-text">完整企业品牌站：公司介绍、热门产品、新闻中心、展会日历。</span></p>
+              <a href="https://www.xiangfengtea.com" target="_blank" rel="noopener" style="display:inline-block; margin-top:6px; font-size:0.8125rem; color:var(--accent); text-decoration:none;">Visit site ↗</a>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- 03 EXPERIENCE -->
+      <section id="experience">
+        <div class="section-head">
+          <span class="section-head__num">03</span>
+          <h2><span class="en-text">Experience</span><span class="zh-text">工作经历</span></h2>
+        </div>
+        <ul class="timeline">
+          <li class="timeline-item">
+            <span class="period">Mar 2026 – Present</span>
+            <h3><span class="en-text">AI Video Producer & Video Editor</span><span class="zh-text">AI视频制作人 & 剪辑师</span></h3>
+            <div class="role-company"><span class="en-text">Xiangfeng Tea Group · Changsha, China · Remote-friendly</span><span class="zh-text">湘丰茶业集团 · 长沙 · 远程支持</span></div>
+            <ul>
+              <li><span class="en-text">Owning full AI video production pipeline: concept → AI generation → editing → delivery</span><span class="zh-text">独立掌控 AI 视频全链路：创意 → AI 生成 → 剪辑 → 交付</span></li>
+              <li><span class="en-text">12+ AI product promo videos and 6 consistency-locked character asset sets in 6 months</span><span class="zh-text">6 个月内交付 12+ 条 AI 产品宣传片和 6 套角色一致性资产集</span></li>
+              <li><span class="en-text">Videos shipped to TikTok, YouTube, WeChat Channels, Tmall product pages</span><span class="zh-text">视频发布至 TikTok、YouTube、视频号、天猫产品页</span></li>
+              <li><span class="en-text">Built company-level media-asset library for 20+ regional teams</span><span class="zh-text">搭建公司级媒体素材库，服务 20+ 区域团队</span></li>
+            </ul>
+          </li>
+          <li class="timeline-item">
+            <span class="period">Apr 2024 – Feb 2025</span>
+            <h3><span class="en-text">AI Video Editor & Motion Designer</span><span class="zh-text">AI视频剪辑师 & 动态设计师</span></h3>
+            <div class="role-company"><span class="en-text">Hunan Xijian Smart Home (HOROW Switzerland) · Changsha, China</span><span class="zh-text">湖南希箭智能家居（HOROW 瑞士）· 长沙</span></div>
+            <ul>
+              <li><span class="en-text">AI-assisted video production for animated content and overseas social media (TikTok / YouTube Shorts)</span><span class="zh-text">AI 辅助动画内容和海外社媒（TikTok / YouTube Shorts）视频制作</span></li>
+              <li><span class="en-text">AI storyboard + motion design + editing for short-form marketing campaigns</span><span class="zh-text">AI 分镜 + 动态设计 + 剪辑，服务短形式营销活动</span></li>
+            </ul>
+          </li>
+          <li class="timeline-item">
+            <span class="period"><span class="en-text">Self-study · 2025–2026</span><span class="zh-text">自主学习 · 2025–2026</span></span>
+            <h3><span class="en-text">AI-assisted Website Building (Self-taught)</span><span class="zh-text">AI 辅助网站搭建（自学）</span></h3>
+            <div class="role-company"><span class="en-text">Side-project · HTML/CSS fundamentals + AI pair-programming (Cursor / Trae)</span><span class="zh-text">副业项目 · HTML/CSS 基础 + AI 结对编程（Cursor / Trae）</span></div>
+            <ul>
+              <li><span class="en-text">Self-learned HTML/CSS fundamentals from zero — built 2 production-grade websites for export businesses in Changsha, entirely through AI-assisted pair programming sessions</span><span class="zh-text">从零基础自学 HTML/CSS 基础，通过 AI 结对编程独立为长沙外贸企业搭建了 2 个生产级网站</span></li>
+              <li><span class="en-text">Delivered sites: aultras-tea.com (English-language corporate site for overseas buyers, catalog & inquiries) and xiangfengtea.com (corporate brand site)</span><span class="zh-text">交付案例：aultras-tea.com（面向海外买家的英文企业站，含产品目录和询盘入口）和 xiangfengtea.com（企业品牌官网）</span></li>
+              <li><span class="en-text">Deployed to GitHub Pages, handled domain DNS, SSL certificates, and cross-browser compatibility — full ownership from 0 to 1</span><span class="zh-text">独立完成 GitHub Pages 部署、域名 DNS 配置、SSL 证书和跨浏览器兼容性——从 0 到 1 全权负责</span></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 04 CORE SKILLS -->
+      <section id="skills">
+        <div class="section-head">
+          <span class="section-head__num">04</span>
+          <h2><span class="en-text">Core Skills</span><span class="zh-text">核心技能</span></h2>
+        </div>
+        <div class="skill-grid">
+          <div class="skill-card">
+            <span class="skill-card__num">01 / GENERATE</span>
+            <h3><span class="en-text">AI Video Production</span><span class="zh-text">AI 视频生成</span></h3>
+            <p><span class="en-text">ComfyUI node workflows, Jimeng/Dreamina, PuLID-Flux character locking, Midjourney + LoRA, Wan2.2 I2V 14B image-to-video.</span><span class="zh-text">ComfyUI 节点工作流、即梦/可灵、PuLID-Flux 角色锁定、Midjourney + LoRA、Wan2.2 I2V 14B 图生视频。</span></p>
+          </div>
+          <div class="skill-card">
+            <span class="skill-card__num">02 / EDIT</span>
+            <h3><span class="en-text">Post-Production</span><span class="zh-text">后期剪辑</span></h3>
+            <p><span class="en-text">CapCut Pro (primary), pacing, subtitle packaging, sound design, color grading, platform-native delivery for TikTok / YouTube / Shorts.</span><span class="zh-text">CapCut Pro 主力、节奏把控、字幕包装、音效配乐、调色、TikTok/YouTube/Shorts 等平台原生交付。</span></p>
+          </div>
+          <div class="skill-card">
+            <span class="skill-card__num">03 / FLOW</span>
+            <h3><span class="en-text">Workflow & Collaboration</span><span class="zh-text">协作流程</span></h3>
+            <p><span class="en-text">Async-first, self-managed. Slack, Notion, Google Drive. Written English fluent. Timezone-adaptive for CET overlap.</span><span class="zh-text">异步优先、自我管理。Slack、Notion、Google Drive。书面英文流利，CET 时区自适应。</span></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 05 COMFYUI WORKSTATION -->
+      <section id="workstation">
+        <div class="section-head">
+          <span class="section-head__num">05</span>
+          <h2><span class="en-text">ComfyUI Workstation</span><span class="zh-text">AI 工作站</span></h2>
+        </div>
+        <p class="section-lead">
+          <span class="en-text">Self-hosted ComfyUI v3.2 deployment running a 14B video model on consumer GPU — 7 validated production capabilities with measured performance.</span>
+          <span class="zh-text">自托管 ComfyUI v3.2，消费级 GPU 上运行 14B 视频模型——7 大已验证生产能力，带实测性能数据。</span>
+        </p>
+        <div class="ws-hero">
+          <span class="ws-badge">● <span class="en-text">LIVE WORKSTATION</span><span class="zh-text">● 实机在跑</span></span>
+          <h3 style="font-size: 1.125rem; margin-bottom: 4px;"><span class="en-text">Hardware & Stack</span><span class="zh-text">硬件与软件栈</span></h3>
+          <div class="ws-specs">
+            <div class="ws-spec"><div class="ws-spec__k">GPU</div><div class="ws-spec__v">RTX 4070 Ti SUPER · 16GB VRAM</div></div>
+            <div class="ws-spec"><div class="ws-spec__k"><span class="en-text">CPU / RAM</span><span class="zh-text">CPU / 内存</span></div><div class="ws-spec__v">28-core · 64GB DDR5</div></div>
+            <div class="ws-spec"><div class="ws-spec__k"><span class="en-text">Storage</span><span class="zh-text">存储</span></div><div class="ws-spec__v">2TB NVMe · 80GB model weights</div></div>
+            <div class="ws-spec"><div class="ws-spec__k"><span class="en-text">Software</span><span class="zh-text">软件</span></div><div class="ws-spec__v">ComfyUI v3.2 · PyTorch 2.13 + CUDA 13</div></div>
+            <div class="ws-spec"><div class="ws-spec__k"><span class="en-text">Models</span><span class="zh-text">模型</span></div><div class="ws-spec__v">FLUX.1 Krea · FLUX Kontext · Wan2.2 I2V 14B</div></div>
+            <div class="ws-spec"><div class="ws-spec__k"><span class="en-text">Scale</span><span class="zh-text">规模</span></div><div class="ws-spec__v">13 custom nodes · 14 one-click workflows</div></div>
+          </div>
+          <p style="margin-top: 16px; font-size: 0.875rem; color: var(--ink-muted);">
+            <span class="en-text">Key engineering achievement: fp8 quantization + block-swap technique enables the 14B Wan2.2 video model to run on consumer 16GB VRAM — normally requiring a 24GB+ professional GPU.</span>
+            <span class="zh-text">核心技术亮点：fp8 量化 + block-swap 技术，让 14B 参数量的 Wan2.2 视频模型能在消费级 16GB 显存上跑通——通常需要 24GB 以上专业显卡。</span>
+          </p>
+        </div>
+        <h3 style="margin-bottom: 16px; color: var(--accent); font-family: var(--font-mono); letter-spacing: 0.1rem; font-size: 0.8125rem; text-transform: uppercase;">
+          <span class="en-text">Validated Production Capabilities</span><span class="zh-text">已验证的 7 大生产能力</span>
+        </h3>
+        <div class="cap-grid">
+          <div class="cap-card"><span class="cap-card__num">CAP 01</span><h3>FLUX.1 Krea fp8 Photorealistic T2I</h3><p><span class="en-text">High-fidelity text-to-image generation with fine-grained control.</span><span class="zh-text">高保真文生图，支持细粒度控制。</span></p><span class="metric">~18.5s / shot</span></div>
+          <div class="cap-card"><span class="cap-card__num">CAP 02</span><h3>FLUX Kontext</h3><p><span class="en-text">Semantic image editing via Chinese-language instructions — add, remove, re-contextualize.</span><span class="zh-text">中文指令驱动的语义图像编辑——增删改、换语境。</span></p></div>
+          <div class="cap-card"><span class="cap-card__num">CAP 03</span><h3>PuLID-Flux Character Consistency</h3><p><span class="en-text">Lock a character's face and identity across multiple scenes and frames.</span><span class="zh-text">锁定角色的面部和身份，跨场景跨帧保持一致。</span></p></div>
+          <div class="cap-card"><span class="cap-card__num">CAP 04</span><h3>FLUX.1-Fill Inpainting</h3><p><span class="en-text">Precise object removal, background replacement, and element extension.</span><span class="zh-text">精准去物、换背景、元素延展。</span></p></div>
+          <div class="cap-card"><span class="cap-card__num">CAP 05</span><h3>SeedVR2 3B Pixel SR (4x)</h3><p><span class="en-text">Upscale low-res footage with detail-preserving pixel refinement.</span><span class="zh-text">低分辨率素材放大，保留细节的像素级重建。</span></p><span class="metric">177–297s / segment</span></div>
+          <div class="cap-card"><span class="cap-card__num">CAP 06</span><h3>Wan2.2 I2V 14B Pipeline</h3><p><span class="en-text">Image-to-video with specialized flows for water, steam, ambient motion.</span><span class="zh-text">图生视频，水流、蒸汽、环境动态等专项流程。</span></p></div>
+          <div class="cap-card"><span class="cap-card__num">CAP 07</span><h3>Video SR 480p → 1080p</h3><p><span class="en-text">Restore and upscale AI-generated video to broadcast quality.</span><span class="zh-text">AI 生成视频修复 + 放大至播出级画质。</span></p></div>
+        </div>
+      </section>
+
       <!-- 06 CONTACT -->
       <section id="contact">
         <div class="section-head">
@@ -553,20 +529,13 @@
           </div>
         </dl>
       </section>
-
-      <footer>
-        <p>© 2026 Chujiang Liu · <span class="en-text">Remote AI Video Producer · ComfyUI Local Deployment</span><span class="zh-text">远程 AI 视频制作人 · 自建 ComfyUI 本地工作站</span></p>
-      </footer>
     </main>
   </article>
 
   <script>
-    // === BILINGUAL TOGGLE ===
     var body = document.body;
     var toggle = document.getElementById('langToggle');
-    // Default: English; allow URL ?lang=zh override
-    var urlLang = new URLSearchParams(window.location.search).get('lang');
-    var savedLang = localStorage.getItem('lang') || urlLang || 'en';
+    var savedLang = localStorage.getItem('lang') || 'en';
     function applyLang(lang) {
       body.classList.toggle('lang-zh', lang === 'zh');
       body.classList.toggle('lang-en', lang === 'en');
@@ -580,30 +549,26 @@
       applyLang(next);
     });
 
-    // Nav scroll effect
     var nav = document.getElementById('nav');
     window.addEventListener('scroll', function() {
       nav.classList.toggle('is-scrolled', window.scrollY > 20);
     }, { passive: true });
 
-    // Cursor spotlight
     var spotlight = document.getElementById('cursor-spotlight');
     document.addEventListener('mousemove', function(e) {
       spotlight.style.setProperty('--spot-x', e.clientX + 'px');
       spotlight.style.setProperty('--spot-y', e.clientY + 'px');
     });
 
-    // Scroll fade-in
     var observer = new IntersectionObserver(function(entries) {
       entries.forEach(function(entry) {
         if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); }
       });
     }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-    document.querySelectorAll('.work-card, .skill-card, .cap-card, .contact-card, .stat, .timeline-item, .callout, .section-head, .section-lead').forEach(function(el) {
+    document.querySelectorAll('.work-card, .skill-card, .cap-card, .contact-card, .stat, .timeline-item, .section-head, .section-lead').forEach(function(el) {
       observer.observe(el);
     });
 
-    // Video fallback
     document.querySelectorAll('video').forEach(function(video) {
       video.addEventListener('error', function() {
         var fb = video.getAttribute('data-fallback');
